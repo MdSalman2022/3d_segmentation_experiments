@@ -1,0 +1,57 @@
+
+================================================================================
+              KiTS23 COMPREHENSIVE DATASET ANALYSIS REPORT
+================================================================================
+
+DATASET OVERVIEW
+----------------
+Total CT Scans: 489
+Image Modality: Contrast-enhanced CT
+Task: Multi-class Semantic Segmentation
+
+CLASS DISTRIBUTION
+------------------
+                    Count       Prevalence
+Kidney (any):         489        100.0%
+Tumor:                489        100.0%
+Cyst:                 248         50.7%
+
+CASE BREAKDOWN
+--------------
+Kidney only (no lesion):  0 cases
+Tumor only:               241 cases
+Cyst only:                0 cases
+Both tumor and cyst:      248 cases
+
+VOLUME STATISTICS (mL)
+----------------------
+Structure   Mean      Median    Min       Max       Std
+Kidney         408.2     395.3      67.7    1061.0     118.3
+Tumor          132.0      32.3       0.2    2591.0     267.5
+Cyst            26.3       4.4       0.0     937.4      77.6
+
+IMAGE PROPERTIES
+----------------
+Depth (slices): Mean=195, Range=[29-1059]
+In-plane size:  Typically 512×512 voxels
+Z-spacing:      Mean=3.36mm, Range=[0.50-5.00]mm
+XY-spacing:     Mean=0.80mm
+
+KEY CHALLENGES
+--------------
+1. CLASS IMBALANCE: Tumor is 3.1x smaller than kidney on average
+2. RARE CYSTS: Only 50.7% of cases contain cysts
+3. VARIABLE SPACING: Z-spacing varies significantly, requiring careful resampling
+4. SMALL STRUCTURES: Median tumor volume is only 32.3 mL
+
+MODEL CONSIDERATIONS
+--------------------
+- Use class-weighted loss functions
+- Oversample minority classes (tumor, cyst)
+- Apply heavy data augmentation
+- Consider multi-scale architectures
+- Post-processing for connectivity
+
+================================================================================
+Generated: KiTS23 Dataset Analysis Tool
+================================================================================

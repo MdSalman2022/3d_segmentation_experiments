@@ -1,0 +1,142 @@
+(dl-env-linux) wsluser@DESKTOP-J3ESTLE:/mnt/d/Salman/gastric_cancer/kidney$ python evaluate_v6b.py
+<frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+2026-03-08 18:25:15.230607: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-08 18:25:15.744779: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-03-08 18:25:17.199947: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+\n============================================================
+SwinUNETR-VISTA3D V6b Evaluation
+============================================================
+Checkpoint: best_final.pth
+============================================================\n
+  ✓ Using cached SwinUNETR weights: /home/wsluser/.torch/models/model_swinvit.pt
+  (Remapped: module.* → swinViT.*)
+  ✓ Loaded 94/159 pretrained SwinUNETR weights
+✓ SwinUNETR Encoder | Trainable: 62,569,504
+/home/wsluser/miniconda3/envs/dl-env-linux/lib/python3.10/site-packages/open_clip/factory.py:450: UserWarning: QuickGELU mismatch between final model config (quick_gelu=False) and pretrained tag 'openai' (quick_gelu=True).
+  warnings.warn(
+✓ MGPL: 4 classes × 5 levels → dim=512
+✓ TextGuidedDecoder: [256, 128, 64, 32], prompt_attn=ON
+
+=======================================================
+VLMLoopSegNet V6 | Total: 223,070,385 | Trainable: 71,793,072
+MGPL: ON
+=======================================================
+
+✓ Loaded best_final.pth\n
+Evaluating 97 cases ...\n
+/home/wsluser/miniconda3/envs/dl-env-linux/lib/python3.10/site-packages/monai/inferers/utils.py:226: UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /pytorch/torch/csrc/autograd/python_variable_indexing.cpp:347.)
+  win_data = torch.cat([inputs[win_slice] for win_slice in unravel_slice]).to(sw_device)
+/home/wsluser/miniconda3/envs/dl-env-linux/lib/python3.10/site-packages/monai/inferers/utils.py:370: UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /pytorch/torch/csrc/autograd/python_variable_indexing.cpp:347.)
+  out[idx_zm] += p
+case_00000 ... K=0.626 T=0.001 C=0.000 | GT: K=854483 T=20462 C=0 (81s)
+case_00001 ... K=0.646 T=0.019 C=0.000 | GT: K=1404329 T=13788 C=0 (81s)
+case_00002 ... K=0.683 T=0.035 C=0.198 | GT: K=550398 T=41936 C=45137 (36s)
+case_00003 ... K=0.745 T=0.173 C=0.000 | GT: K=510016 T=15540 C=0 (36s)
+case_00004 ... K=0.789 T=0.416 C=0.000 | GT: K=112728 T=5297 C=0 (9s)
+case_00005 ... K=0.416 T=0.019 C=0.000 | GT: K=828852 T=134967 C=0 (107s)
+case_00006 ... K=0.622 T=0.144 C=0.045 | GT: K=232690 T=6835 C=2289 (19s)
+case_00007 ... K=0.885 T=0.139 C=0.000 | GT: K=201012 T=7261 C=0 (9s)
+case_00008 ... K=0.315 T=0.627 C=0.034 | GT: K=254497 T=282908 C=5237 (27s)
+case_00009 ... K=0.859 T=0.095 C=0.000 | GT: K=151021 T=4765 C=0 (9s)
+case_00010 ... K=0.832 T=0.000 C=0.000 | GT: K=199386 T=8652 C=0 (9s)
+case_00011 ... K=0.778 T=0.344 C=0.000 | GT: K=146281 T=22825 C=0 (9s)
+case_00012 ... K=0.627 T=0.778 C=0.000 | GT: K=102573 T=92832 C=0 (9s)
+case_00013 ... K=0.628 T=0.648 C=0.000 | GT: K=187987 T=28239 C=0 (9s)
+case_00014 ... K=0.525 T=0.000 C=0.000 | GT: K=434469 T=7207 C=0 (55s)
+case_00015 ... K=0.895 T=0.000 C=0.009 | GT: K=268986 T=11682 C=1964 (10s)
+case_00016 ... K=0.660 T=0.146 C=0.000 | GT: K=344922 T=38537 C=0 (27s)
+case_00017 ... K=0.756 T=0.000 C=0.000 | GT: K=179292 T=2899 C=0 (18s)
+case_00018 ... K=0.927 T=0.656 C=0.000 | GT: K=235179 T=9904 C=0 (18s)
+case_00019 ... K=0.897 T=0.035 C=0.000 | GT: K=153461 T=547 C=0 (19s)
+case_00020 ... K=0.885 T=0.003 C=0.000 | GT: K=117124 T=1570 C=50 (9s)
+case_00021 ... K=0.671 T=0.459 C=0.069 | GT: K=96548 T=7837 C=3563 (9s)
+case_00022 ... K=0.625 T=0.020 C=0.000 | GT: K=955304 T=21208 C=0 (71s)
+case_00023 ... K=0.934 T=0.000 C=0.000 | GT: K=286708 T=1935 C=0 (19s)
+case_00024 ... K=0.837 T=0.601 C=0.000 | GT: K=145386 T=54608 C=0 (9s)
+case_00025 ... K=0.877 T=0.919 C=0.000 | GT: K=280872 T=390440 C=0 (18s)
+case_00026 ... K=0.633 T=0.464 C=0.137 | GT: K=331488 T=118967 C=39138 (35s)
+case_00027 ... K=0.624 T=0.008 C=0.011 | GT: K=1122310 T=10624 C=3361 (90s)
+case_00028 ... K=0.865 T=0.777 C=0.000 | GT: K=151648 T=81060 C=255 (19s)
+case_00029 ... K=0.754 T=0.499 C=0.000 | GT: K=129948 T=32945 C=0 (19s)
+case_00030 ... K=0.473 T=0.773 C=0.000 | GT: K=100690 T=542374 C=247 (9s)
+case_00031 ... K=0.437 T=0.000 C=0.000 | GT: K=316311 T=5142 C=0 (18s)
+case_00032 ... K=0.686 T=0.072 C=0.015 | GT: K=180034 T=6079 C=674 (27s)
+case_00033 ... K=0.667 T=0.039 C=0.000 | GT: K=673926 T=7619 C=0 (53s)
+case_00034 ... K=0.860 T=0.000 C=0.025 | GT: K=162478 T=12930 C=467 (18s)
+case_00035 ... K=0.669 T=0.279 C=0.000 | GT: K=102806 T=5109 C=0 (18s)
+case_00036 ... K=0.706 T=0.303 C=0.000 | GT: K=301381 T=41064 C=0 (18s)
+case_00037 ... K=0.657 T=0.855 C=0.376 | GT: K=113322 T=97489 C=18586 (18s)
+case_00038 ... K=0.817 T=0.507 C=0.000 | GT: K=165094 T=25463 C=0 (9s)
+case_00039 ... K=0.813 T=0.000 C=0.000 | GT: K=138231 T=2641 C=0 (9s)
+case_00040 ... K=0.671 T=0.182 C=0.000 | GT: K=306466 T=6427 C=0 (27s)
+case_00041 ... K=0.840 T=0.000 C=0.000 | GT: K=226329 T=26101 C=0 (9s)
+case_00042 ... K=0.674 T=0.462 C=0.000 | GT: K=511912 T=1848011 C=0 (35s)
+case_00043 ... K=0.585 T=0.001 C=0.000 | GT: K=218090 T=7177 C=0 (26s)
+case_00044 ... K=0.816 T=0.863 C=0.000 | GT: K=118560 T=29758 C=0 (18s)
+case_00045 ... K=0.550 T=0.005 C=0.151 | GT: K=110724 T=39151 C=12800 (9s)
+case_00046 ... K=0.610 T=0.282 C=0.000 | GT: K=145404 T=18024 C=0 (18s)
+case_00047 ... K=0.788 T=0.676 C=0.000 | GT: K=111092 T=33959 C=0 (18s)
+case_00048 ... K=0.581 T=0.000 C=0.000 | GT: K=88717 T=7296 C=0 (9s)
+case_00049 ... K=0.661 T=0.001 C=0.000 | GT: K=1111936 T=15871 C=0 (81s)
+case_00050 ... K=0.921 T=0.000 C=0.035 | GT: K=356312 T=1527 C=1431 (10s)
+case_00051 ... K=0.862 T=0.000 C=0.205 | GT: K=187029 T=13980 C=3304 (9s)
+case_00052 ... K=0.749 T=0.107 C=0.000 | GT: K=1010449 T=34788 C=0 (90s)
+case_00053 ... K=0.698 T=0.331 C=0.000 | GT: K=974874 T=134230 C=0 (72s)
+case_00054 ... K=0.855 T=0.000 C=0.000 | GT: K=114367 T=2122 C=249 (18s)
+case_00055 ... K=0.680 T=0.803 C=0.000 | GT: K=96137 T=128509 C=0 (18s)
+case_00056 ... K=0.774 T=0.871 C=0.000 | GT: K=186876 T=237399 C=0 (9s)
+case_00057 ... K=0.788 T=0.747 C=0.000 | GT: K=165022 T=56755 C=0 (9s)
+case_00058 ... K=0.871 T=0.173 C=0.426 | GT: K=141187 T=22203 C=12149 (18s)
+case_00059 ... K=0.624 T=0.007 C=0.000 | GT: K=1036366 T=51899 C=0 (92s)
+case_00060 ... K=0.544 T=0.280 C=0.269 | GT: K=140099 T=16867 C=6444 (19s)
+case_00061 ... K=0.752 T=0.294 C=0.000 | GT: K=123831 T=23400 C=0 (9s)
+case_00062 ... K=0.830 T=0.000 C=0.000 | GT: K=99277 T=1326 C=0 (9s)
+case_00063 ... K=0.715 T=0.004 C=0.144 | GT: K=1254561 T=31102 C=30181 (63s)
+case_00064 ... K=0.698 T=0.017 C=0.000 | GT: K=113698 T=2575 C=788 (10s)
+case_00065 ... K=0.828 T=0.085 C=0.000 | GT: K=292194 T=6616 C=0 (18s)
+case_00066 ... K=0.433 T=0.026 C=0.000 | GT: K=395084 T=54253 C=935 (54s)
+case_00067 ... K=0.651 T=0.837 C=0.000 | GT: K=485178 T=1816289 C=0 (37s)
+case_00068 ... K=0.463 T=0.067 C=0.216 | GT: K=1312343 T=67073 C=197350 (80s)
+case_00069 ... K=0.773 T=0.005 C=0.407 | GT: K=188325 T=18715 C=60319 (9s)
+case_00070 ... K=0.654 T=0.645 C=0.000 | GT: K=168142 T=162501 C=0 (9s)
+case_00071 ... K=0.554 T=0.050 C=0.000 | GT: K=1119977 T=47510 C=0 (78s)
+case_00072 ... K=0.633 T=0.000 C=0.000 | GT: K=369778 T=2325 C=0 (18s)
+case_00073 ... K=0.736 T=0.653 C=0.125 | GT: K=136524 T=117145 C=7245 (18s)
+case_00074 ... K=0.691 T=0.241 C=0.375 | GT: K=138760 T=11848 C=19205 (9s)
+case_00075 ... K=0.821 T=0.000 C=0.000 | GT: K=131753 T=2030 C=308 (9s)
+case_00076 ... K=0.797 T=0.141 C=0.000 | GT: K=132777 T=2790 C=139 (9s)
+case_00077 ... K=0.858 T=0.121 C=0.000 | GT: K=152167 T=3306 C=0 (9s)
+case_00078 ... K=0.534 T=0.489 C=0.000 | GT: K=703424 T=727346 C=0 (45s)
+case_00079 ... K=0.400 T=0.600 C=0.000 | GT: K=141132 T=171432 C=0 (19s)
+case_00080 ... K=0.793 T=0.378 C=0.000 | GT: K=152872 T=15039 C=0 (9s)
+case_00081 ... K=0.752 T=0.000 C=0.001 | GT: K=190858 T=2428 C=181 (18s)
+case_00082 ... K=0.877 T=0.085 C=0.000 | GT: K=160875 T=2708 C=194 (17s)
+case_00083 ... K=0.866 T=0.342 C=0.031 | GT: K=228706 T=4528 C=993 (9s)
+case_00084 ... K=0.632 T=0.105 C=0.326 | GT: K=323388 T=52220 C=27342 (36s)
+case_00085 ... K=0.822 T=0.063 C=0.000 | GT: K=123451 T=1910 C=0 (10s)
+case_00086 ... K=0.500 T=0.076 C=0.000 | GT: K=319970 T=18854 C=0 (27s)
+case_00087 ... K=0.668 T=0.000 C=0.000 | GT: K=169623 T=15329 C=0 (9s)
+case_00088 ... K=0.594 T=0.493 C=0.000 | GT: K=182225 T=397721 C=0 (18s)
+case_00089 ... K=0.781 T=0.739 C=0.000 | GT: K=111117 T=19417 C=0 (9s)
+case_00090 ... K=0.714 T=0.640 C=0.000 | GT: K=123133 T=52274 C=0 (9s)
+case_00091 ... K=0.567 T=0.021 C=0.000 | GT: K=1383928 T=56803 C=0 (88s)
+case_00092 ... K=0.732 T=0.855 C=0.010 | GT: K=177578 T=198103 C=506 (19s)
+case_00093 ... K=0.574 T=0.038 C=0.033 | GT: K=1243801 T=31560 C=95448 (100s)
+case_00094 ... K=0.797 T=0.208 C=0.217 | GT: K=233084 T=5702 C=13617 (11s)
+case_00095 ... K=0.643 T=0.379 C=0.059 | GT: K=267500 T=47620 C=4429 (44s)
+case_00096 ... K=0.587 T=0.001 C=0.000 | GT: K=1208026 T=24608 C=0 (91s)
+\n======================================================================
+EVALUATION SUMMARY (V6b)
+======================================================================
+Total cases: 97 | Total time: 60.1 min
+\nClass        Overall Dice         Positive-Only Dice        N+
+----------------------------------------------------------------------
+Kidney       0.7058 ± 0.1333      0.7058 ± 0.1333      97
+Tumor        0.2613 ± 0.2931      0.2613 ± 0.2931      97
+Cyst         0.0407 ± 0.0972      0.1097 ± 0.1337      36
+\nMean Foreground Dice:
+  Overall:       0.3359
+  Positive-Only: 0.4399
+======================================================================\n
+✓ Saved to output/vlm_loop_v6b/fair_results.json

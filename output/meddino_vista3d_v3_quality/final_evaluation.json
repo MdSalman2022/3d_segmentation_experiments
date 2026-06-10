@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-01-21T19:34:26.283607",
+  "model": "MedDINO-VISTA3D V3 Quality Edition",
+  "best_overall_dice": 0.7549352049827576,
+  "total_parameters": 93226752,
+  "total_training_time_hours": 33.25,
+  "configuration": {
+    "encoder": "dinov2_vitb14",
+    "patch_size": [
+      140,
+      224,
+      224
+    ],
+    "batch_size": 2,
+    "num_epochs_stage1": 60,
+    "num_epochs_stage2": 50,
+    "lr_stage1": 0.0001,
+    "lr_stage2": 1e-05,
+    "warmup_epochs": 5,
+    "num_workers": 4
+  }
+}

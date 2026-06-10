@@ -1,0 +1,35 @@
+
+================================================================================
+                    KiTS23 DATASET ANALYSIS SUMMARY
+================================================================================
+
+DATASET INFORMATION:
+- Name: Kidney Tumor Segmentation Challenge 2023 (KiTS23)
+- Total Cases: 489 CT scans
+- Task: Multi-class semantic segmentation
+- Classes: Background (0), Kidney (1), Tumor (2), Cyst (3)
+
+KEY CHALLENGES:
+1. Class Imbalance: Tumors and cysts are much smaller than kidneys
+2. Variable Sizes: Wide range of structure volumes
+3. Complex Anatomy: Tumors embedded within kidney tissue
+
+PREPROCESSING PIPELINE:
+- Resampling to isotropic spacing (1.0-1.5mm)
+- CT windowing: [-200, 300] HU
+- Normalization: Zero-mean, unit-variance
+- Data augmentation: Rotation, scaling, elastic deformation
+
+MODEL APPROACH:
+- Architecture: nnU-Net (3D Full Resolution)
+- Training: 1000 epochs with polynomial LR decay
+- Loss: Dice + Cross-Entropy (handles class imbalance)
+- Ensemble: Multiple configurations for robustness
+
+TARGET METRICS:
+- Kidney Dice: ≥ 0.90
+- Tumor Dice: ≥ 0.70
+- Cyst Dice: ≥ 0.50
+
+STATUS: Preprocessing in progress, training to follow.
+================================================================================

@@ -1,0 +1,41 @@
+{
+  "epoch": 9,
+  "adaptive_class_weights": [
+    0.10000000149011612,
+    1.0,
+    20.0,
+    17.19927215576172
+  ],
+  "case_difficulty_scores": {},
+  "sampling_bias": {
+    "tumor": 0.65,
+    "cyst": 0.1,
+    "kidney": 0.15,
+    "random": 0.1
+  },
+  "error_counts": {
+    "kidney": {
+      "missed": 0,
+      "over_segmented": 0,
+      "boundary": 0,
+      "class_confusion": 0,
+      "none": 0
+    },
+    "tumor": {
+      "missed": 0,
+      "over_segmented": 0,
+      "boundary": 0,
+      "class_confusion": 0,
+      "none": 0
+    },
+    "cyst": {
+      "missed": 0,
+      "over_segmented": 0,
+      "boundary": 0,
+      "class_confusion": 0,
+      "none": 0
+    }
+  },
+  "dominant_failures": [],
+  "num_analyzed": 0
+}

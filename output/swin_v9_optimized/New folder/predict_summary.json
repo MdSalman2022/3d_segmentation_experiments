@@ -1,0 +1,13 @@
+{
+  "checkpoint": "output/swin_v9_optimized/best_final.pth",
+  "split": "test",
+  "n_cases": 40,
+  "mean_fg_dice": 0.3011,
+  "mean_fg_iou": 0.2286,
+  "kidney_dice": 0.6923,
+  "tumor_dice": 0.139,
+  "cyst_dice": 0.0719,
+  "kidney_dice_std": 0.1737,
+  "tumor_dice_std": 0.1923,
+  "cyst_dice_std": 0.1383
+}

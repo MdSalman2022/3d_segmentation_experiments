@@ -1,0 +1,38 @@
+# Keep this project lightweight in git:
+# only allow Python, PDF, JSON, TXT, and this ignore file.
+*
+!*/
+!.gitignore
+!.githooks/
+!.githooks/pre-commit
+!*.py
+!*.ipynb
+!*.pdf
+!*.json
+!*.txt
+
+# Never track dataset directories.
+nnUNet_raw/
+nnUNet_preprocessed/
+nnUNet_results/
+kits23/dataset/
+
+# Never track model weights, checkpoints, arrays, or medical volume data.
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+*.onnx
+*.h5
+*.hdf5
+*.pb
+*.joblib
+*.pkl
+*.npy
+*.npz
+*.b2nd
+*.nii
+*.nii.gz
+*.mha
+*.mhd

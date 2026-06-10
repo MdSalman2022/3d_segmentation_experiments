@@ -1,0 +1,113 @@
+{
+  "version": "V7_ClickPointOracle",
+  "epoch": 2,
+  "timestamp": "2026-03-08T14:32:35.277565",
+  "num_corrected": 5,
+  "cases": [
+    {
+      "case_id": "case_00002",
+      "confidence": 0.6,
+      "num_corrections": 3538933,
+      "num_clicks": 1,
+      "severity": "severe",
+      "error_type": "over_segmentation",
+      "click_log": [
+        {
+          "type": "negative",
+          "class": "tumor",
+          "centroid": [
+            47,
+            95,
+            95
+          ],
+          "voxels": 3538933,
+          "action": "remove tumor"
+        }
+      ]
+    },
+    {
+      "case_id": "case_00003",
+      "confidence": 0.6,
+      "num_corrections": 3538610,
+      "num_clicks": 1,
+      "severity": "severe",
+      "error_type": "over_segmentation",
+      "click_log": [
+        {
+          "type": "negative",
+          "class": "tumor",
+          "centroid": [
+            47,
+            95,
+            96
+          ],
+          "voxels": 3538610,
+          "action": "remove tumor"
+        }
+      ]
+    },
+    {
+      "case_id": "case_00001",
+      "confidence": 0.6,
+      "num_corrections": 3534120,
+      "num_clicks": 1,
+      "severity": "severe",
+      "error_type": "over_segmentation",
+      "click_log": [
+        {
+          "type": "negative",
+          "class": "tumor",
+          "centroid": [
+            47,
+            96,
+            96
+          ],
+          "voxels": 3534120,
+          "action": "remove tumor"
+        }
+      ]
+    },
+    {
+      "case_id": "case_00004",
+      "confidence": 0.6,
+      "num_corrections": 3533647,
+      "num_clicks": 1,
+      "severity": "severe",
+      "error_type": "over_segmentation",
+      "click_log": [
+        {
+          "type": "negative",
+          "class": "tumor",
+          "centroid": [
+            48,
+            95,
+            96
+          ],
+          "voxels": 3533647,
+          "action": "remove tumor"
+        }
+      ]
+    },
+    {
+      "case_id": "case_00006",
+      "confidence": 0.6,
+      "num_corrections": 3532109,
+      "num_clicks": 1,
+      "severity": "severe",
+      "error_type": "mixed_errors",
+      "click_log": [
+        {
+          "type": "negative",
+          "class": "tumor",
+          "centroid": [
+            48,
+            95,
+            95
+          ],
+          "voxels": 3532109,
+          "action": "remove tumor"
+        }
+      ]
+    }
+  ]
+}

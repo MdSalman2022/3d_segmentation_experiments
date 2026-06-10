@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-02-07T06:55:12.265778",
+  "version": "V4_TUMOR_FOCUSED",
+  "best_dice": 0.7724204063415527,
+  "total_parameters": 93226752,
+  "total_training_time_hours": 37.27,
+  "config": {
+    "kits23_dir": "./kits23/dataset",
+    "output_dir": "./output/meddino_vista3d_v4_tumor_focused",
+    "dinov2_backbone": "dinov2_vitb14",
+    "hf_token": null,
+    "num_classes": 4,
+    "batch_size": 2,
+    "val_split": 0.2,
+    "num_samples_per_volume": 2,
+    "patch_size": [
+      140,
+      224,
+      224
+    ],
+    "lr_stage1": 0.0001,
+    "lr_stage2": 1e-05,
+    "weight_decay": 1e-05,
+    "num_epochs_stage1": 60,
+    "num_epochs_stage2": 50,
+    "quick_cases": null,
+    "use_warmup": true,
+    "warmup_epochs": 5,
+    "patience_stage1": 10,
+    "patience_stage2": 10,
+    "checkpoint_freq": 5
+  }
+}

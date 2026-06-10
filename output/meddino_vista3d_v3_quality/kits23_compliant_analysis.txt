@@ -1,0 +1,53 @@
+================================================================================
+KiTS23-COMPLIANT EVALUATION ANALYSIS
+================================================================================
+
+OVERALL METRICS (including empty cases):
+--------------------------------------------------------------------------------
+Kidney Dice:  0.9065 ± 0.0529
+Tumor Dice:   0.4697 ± 0.3503
+Cyst Dice:    0.1707 ± 0.2910
+
+TUMOR ANALYSIS:
+--------------------------------------------------------------------------------
+Total cases: 97
+Cases with GT tumor: 84
+Cases WITHOUT GT tumor: 13
+
+Dice on cases WITH tumor:
+  Mean: 0.5423 ± 0.3198
+  Median: 0.6152
+  Range: [0.0213, 0.9407]
+
+CYST ANALYSIS:
+--------------------------------------------------------------------------------
+Total cases: 97
+Cases with GT cyst: 29
+Cases WITHOUT GT cyst: 68
+
+Dice on cases WITH cyst:
+  Mean: 0.5706 ± 0.2346
+  Median: 0.6555
+  Range: [0.0132, 0.8601]
+
+================================================================================
+KEY INSIGHTS:
+================================================================================
+
+The KiTS23 Dice score is HARSH on empty cases:
+  - If GT is empty but you predict → Dice = 0.0 (false positive)
+  - If GT has class but you miss it → Dice = 0.0 (false negative)
+  - If both empty → Dice = 1.0 (perfect agreement)
+
+Your 'low' Tumor/Cyst Dice includes many cases where:
+  1. No tumor/cyst exists in GT, but model predicted one
+  2. Tiny tumor/cyst exists but is very hard to segment
+
+Dataset composition:
+  13.4% of cases have NO or minimal tumor
+  70.1% of cases have NO or minimal cyst
+
+✅ On cases WITH tumor, your Dice is 54.2%
+   This is much better than the overall 47.0%!
+
+================================================================================

@@ -1,0 +1,5344 @@
+{
+  "version": "V5_VLM_CRITIC_MGPL",
+  "epochs": [
+    {
+      "timestamp": "2026-03-01T15:01:31.637515",
+      "stage": "stage1",
+      "epoch": 1,
+      "epoch_time_minutes": 3.49,
+      "train_loss": 0.9427689582109451,
+      "val_loss": 0.6389048278331757,
+      "metrics": {
+        "mean_dice_fg": 0.0026531137991696596,
+        "classes": {
+          "background": {
+            "dice": 0.24732080101966858,
+            "iou": 0.1411101371049881,
+            "precision": 0.9981344938278198,
+            "recall": 0.14114736020565033
+          },
+          "kidney": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "tumor": {
+            "dice": 0.007959341630339622,
+            "iou": 0.003995571751147509,
+            "precision": 0.003995619248598814,
+            "recall": 0.9970514178276062
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T15:04:29.850972",
+      "stage": "stage1",
+      "epoch": 2,
+      "epoch_time_minutes": 2.81,
+      "train_loss": 0.8593379192054271,
+      "val_loss": 0.64633429646492,
+      "metrics": {
+        "mean_dice_fg": 0.01579362340271473,
+        "classes": {
+          "background": {
+            "dice": 0.010529546067118645,
+            "iou": 0.00529263773933053,
+            "precision": 1.0,
+            "recall": 0.00529263773933053
+          },
+          "kidney": {
+            "dice": 0.040419019758701324,
+            "iou": 0.020626358687877655,
+            "precision": 0.17490068078041077,
+            "recall": 0.02284976653754711
+          },
+          "tumor": {
+            "dice": 0.006961850915104151,
+            "iou": 0.0034930845722556114,
+            "precision": 0.0034930845722556114,
+            "recall": 1.0
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T15:07:10.764845",
+      "stage": "stage1",
+      "epoch": 3,
+      "epoch_time_minutes": 2.59,
+      "train_loss": 0.7384321719408036,
+      "val_loss": 0.632148951292038,
+      "metrics": {
+        "mean_dice_fg": 0.049863528460264206,
+        "classes": {
+          "background": {
+            "dice": 0.4456356167793274,
+            "iou": 0.2866995930671692,
+            "precision": 0.9977748394012451,
+            "recall": 0.28688299655914307
+          },
+          "kidney": {
+            "dice": 0.13920943439006805,
+            "iou": 0.07481198757886887,
+            "precision": 0.10315749794244766,
+            "recall": 0.21399864554405212
+          },
+          "tumor": {
+            "dice": 0.010381143540143967,
+            "iou": 0.005217654164880514,
+            "precision": 0.005217938218265772,
+            "recall": 0.9896799325942993
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true,
+      "vlm_critic_feedback": {
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          15.0,
+          10.0
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.5,
+          "cyst": 0.25,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {},
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T15:10:08.703663",
+      "stage": "stage1",
+      "epoch": 4,
+      "epoch_time_minutes": 2.81,
+      "train_loss": 0.7656926676630974,
+      "val_loss": 0.6205777645111084,
+      "metrics": {
+        "mean_dice_fg": 0.05841246619820595,
+        "classes": {
+          "background": {
+            "dice": 0.5793917179107666,
+            "iou": 0.40784764289855957,
+            "precision": 0.9734463691711426,
+            "recall": 0.4124360978603363
+          },
+          "kidney": {
+            "dice": 0.16530166566371918,
+            "iou": 0.09009746462106705,
+            "precision": 0.11205974221229553,
+            "recall": 0.31493285298347473
+          },
+          "tumor": {
+            "dice": 0.009935738518834114,
+            "iou": 0.0049926722422242165,
+            "precision": 0.005002148915082216,
+            "recall": 0.724921703338623
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T15:13:06.589701",
+      "stage": "stage1",
+      "epoch": 5,
+      "epoch_time_minutes": 2.78,
+      "train_loss": 0.6958538301289081,
+      "val_loss": 0.6136310279369355,
+      "metrics": {
+        "mean_dice_fg": 0.03345630690455437,
+        "classes": {
+          "background": {
+            "dice": 0.7585566639900208,
+            "iou": 0.6110279560089111,
+            "precision": 0.958914041519165,
+            "recall": 0.627454936504364
+          },
+          "kidney": {
+            "dice": 0.09006614238023758,
+            "iou": 0.0471566803753376,
+            "precision": 0.05632897838950157,
+            "recall": 0.22456516325473785
+          },
+          "tumor": {
+            "dice": 0.010302772745490074,
+            "iou": 0.005178060848265886,
+            "precision": 0.005225216969847679,
+            "recall": 0.3645801246166229
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T15:16:14.509482",
+      "stage": "stage1",
+      "epoch": 6,
+      "epoch_time_minutes": 2.92,
+      "train_loss": 0.6640856873244048,
+      "val_loss": 0.597994577884674,
+      "metrics": {
+        "mean_dice_fg": 0.05771714821457863,
+        "classes": {
+          "background": {
+            "dice": 0.827106237411499,
+            "iou": 0.7051842212677002,
+            "precision": 0.9741605520248413,
+            "recall": 0.7186260223388672
+          },
+          "kidney": {
+            "dice": 0.1702679842710495,
+            "iou": 0.09305624663829803,
+            "precision": 0.10980788618326187,
+            "recall": 0.3788776099681854
+          },
+          "tumor": {
+            "dice": 0.00288346316665411,
+            "iou": 0.0014438132056966424,
+            "precision": 0.0014697303995490074,
+            "recall": 0.07568032294511795
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false,
+      "vlm_critic_feedback": {
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          15.0,
+          10.0
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.5,
+          "cyst": 0.25,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {},
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T15:19:07.618563",
+      "stage": "stage1",
+      "epoch": 7,
+      "epoch_time_minutes": 2.8,
+      "train_loss": 0.6613556835800409,
+      "val_loss": 0.5947313010692596,
+      "metrics": {
+        "mean_dice_fg": 0.047393348067998886,
+        "classes": {
+          "background": {
+            "dice": 0.8637753129005432,
+            "iou": 0.7602152824401855,
+            "precision": 0.972645103931427,
+            "recall": 0.7768241167068481
+          },
+          "kidney": {
+            "dice": 0.14161008596420288,
+            "iou": 0.07620041817426682,
+            "precision": 0.08761120587587357,
+            "recall": 0.369109570980072
+          },
+          "tumor": {
+            "dice": 0.0005699518951587379,
+            "iou": 0.0002850571763701737,
+            "precision": 0.00029535620706155896,
+            "recall": 0.008108606562018394
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T15:22:08.757034",
+      "stage": "stage1",
+      "epoch": 8,
+      "epoch_time_minutes": 2.93,
+      "train_loss": 0.6100311905145646,
+      "val_loss": 0.5922157108783722,
+      "metrics": {
+        "mean_dice_fg": 0.05945691093802452,
+        "classes": {
+          "background": {
+            "dice": 0.8852156400680542,
+            "iou": 0.7940689325332642,
+            "precision": 0.9711780548095703,
+            "recall": 0.813233494758606
+          },
+          "kidney": {
+            "dice": 0.1782459318637848,
+            "iou": 0.09784302115440369,
+            "precision": 0.11656572669744492,
+            "recall": 0.3785582184791565
+          },
+          "tumor": {
+            "dice": 0.00012479547876864672,
+            "iou": 6.240163202164695e-05,
+            "precision": 6.483698234660551e-05,
+            "recall": 0.0016585785197094083
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T15:25:07.961715",
+      "stage": "stage1",
+      "epoch": 9,
+      "epoch_time_minutes": 2.8,
+      "train_loss": 0.6081486809998751,
+      "val_loss": 0.5735786199569702,
+      "metrics": {
+        "mean_dice_fg": 0.07807968556880951,
+        "classes": {
+          "background": {
+            "dice": 0.8994364142417908,
+            "iou": 0.8172507882118225,
+            "precision": 0.9796280264854431,
+            "recall": 0.831380307674408
+          },
+          "kidney": {
+            "dice": 0.23368223011493683,
+            "iou": 0.13229908049106598,
+            "precision": 0.1550116240978241,
+            "recall": 0.4744952917098999
+          },
+          "tumor": {
+            "dice": 0.0005568214110098779,
+            "iou": 0.0002784882381092757,
+            "precision": 0.0002899376268032938,
+            "recall": 0.007002887316048145
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true,
+      "vlm_critic_feedback": {
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          15.0,
+          10.0
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.5,
+          "cyst": 0.25,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {},
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T15:27:55.722381",
+      "stage": "stage1",
+      "epoch": 10,
+      "epoch_time_minutes": 2.61,
+      "train_loss": 0.6311340026557446,
+      "val_loss": 0.572395670413971,
+      "metrics": {
+        "mean_dice_fg": 0.06349590420722961,
+        "classes": {
+          "background": {
+            "dice": 0.8950114846229553,
+            "iou": 0.8099735379219055,
+            "precision": 0.9800626635551453,
+            "recall": 0.8235432505607605
+          },
+          "kidney": {
+            "dice": 0.18473923206329346,
+            "iou": 0.1017700806260109,
+            "precision": 0.11475581675767899,
+            "recall": 0.47350385785102844
+          },
+          "tumor": {
+            "dice": 0.0057484861463308334,
+            "iou": 0.0028825283516198397,
+            "precision": 0.0030468348413705826,
+            "recall": 0.05074021592736244
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T15:30:39.326324",
+      "stage": "stage1",
+      "epoch": 11,
+      "epoch_time_minutes": 2.53,
+      "train_loss": 0.5924289651215077,
+      "val_loss": 0.5882955580949784,
+      "metrics": {
+        "mean_dice_fg": 0.06591544300317764,
+        "classes": {
+          "background": {
+            "dice": 0.8939136266708374,
+            "iou": 0.80817711353302,
+            "precision": 0.97613924741745,
+            "recall": 0.8244644999504089
+          },
+          "kidney": {
+            "dice": 0.19774633646011353,
+            "iou": 0.10972169786691666,
+            "precision": 0.12824049592018127,
+            "recall": 0.43175679445266724
+          },
+          "tumor": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T15:33:15.528669",
+      "stage": "stage1",
+      "epoch": 12,
+      "epoch_time_minutes": 2.6,
+      "train_loss": 0.6103570379316807,
+      "val_loss": 0.5916438162326813,
+      "metrics": {
+        "mean_dice_fg": 0.06045326218008995,
+        "classes": {
+          "background": {
+            "dice": 0.8970738649368286,
+            "iou": 0.8133580088615417,
+            "precision": 0.9742651581764221,
+            "recall": 0.8312163352966309
+          },
+          "kidney": {
+            "dice": 0.18135978281497955,
+            "iou": 0.0997227355837822,
+            "precision": 0.11629979312419891,
+            "recall": 0.411635160446167
+          },
+          "tumor": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false,
+      "vlm_critic_feedback": {
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          15.0,
+          10.0
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.5,
+          "cyst": 0.25,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {},
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T15:35:46.817177",
+      "stage": "stage1",
+      "epoch": 13,
+      "epoch_time_minutes": 2.52,
+      "train_loss": 0.5837809275835752,
+      "val_loss": 0.5845994591712952,
+      "metrics": {
+        "mean_dice_fg": 0.06117112934589386,
+        "classes": {
+          "background": {
+            "dice": 0.8961900472640991,
+            "iou": 0.811906099319458,
+            "precision": 0.9748528599739075,
+            "recall": 0.8292742371559143
+          },
+          "kidney": {
+            "dice": 0.18351338803768158,
+            "iou": 0.10102654993534088,
+            "precision": 0.1181582510471344,
+            "recall": 0.410650372505188
+          },
+          "tumor": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T15:42:28.398292",
+      "stage": "stage1",
+      "epoch": 1,
+      "epoch_time_minutes": 3.13,
+      "train_loss": 0.8173595748841762,
+      "val_loss": 0.6559281945228577,
+      "metrics": {
+        "mean_dice_fg": 0.03346187248826027,
+        "classes": {
+          "background": {
+            "dice": 0.9472553133964539,
+            "iou": 0.8997958898544312,
+            "precision": 0.9637607932090759,
+            "recall": 0.9313057065010071
+          },
+          "kidney": {
+            "dice": 0.10038561373949051,
+            "iou": 0.05284525826573372,
+            "precision": 0.07314008474349976,
+            "recall": 0.15998002886772156
+          },
+          "tumor": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T15:46:09.214845",
+      "stage": "stage1",
+      "epoch": 2,
+      "epoch_time_minutes": 3.5,
+      "train_loss": 0.7569731287658215,
+      "val_loss": 0.6205412447452545,
+      "metrics": {
+        "mean_dice_fg": 0.0685710534453392,
+        "classes": {
+          "background": {
+            "dice": 0.9350003600120544,
+            "iou": 0.8779348731040955,
+            "precision": 0.9667587876319885,
+            "recall": 0.9052621126174927
+          },
+          "kidney": {
+            "dice": 0.1866130232810974,
+            "iou": 0.10290854424238205,
+            "precision": 0.15803933143615723,
+            "recall": 0.2277994155883789
+          },
+          "tumor": {
+            "dice": 0.019100148230791092,
+            "iou": 0.009642156772315502,
+            "precision": 0.010786529630422592,
+            "recall": 0.08331242948770523
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T15:49:33.573511",
+      "stage": "stage1",
+      "epoch": 3,
+      "epoch_time_minutes": 3.23,
+      "train_loss": 0.6856305614113808,
+      "val_loss": 0.6068874537944794,
+      "metrics": {
+        "mean_dice_fg": 0.07669372111558914,
+        "classes": {
+          "background": {
+            "dice": 0.9389462471008301,
+            "iou": 0.8849186301231384,
+            "precision": 0.967993438243866,
+            "recall": 0.9115915298461914
+          },
+          "kidney": {
+            "dice": 0.21524345874786377,
+            "iou": 0.12060102075338364,
+            "precision": 0.1829090267419815,
+            "recall": 0.2614648938179016
+          },
+          "tumor": {
+            "dice": 0.014837706461548805,
+            "iou": 0.007474304176867008,
+            "precision": 0.00847199559211731,
+            "recall": 0.05968089774250984
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true,
+      "vlm_critic_feedback": {
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          15.0,
+          10.0
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.5,
+          "cyst": 0.25,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {},
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T15:52:41.433698",
+      "stage": "stage1",
+      "epoch": 4,
+      "epoch_time_minutes": 2.98,
+      "train_loss": 0.6570080365985632,
+      "val_loss": 0.5976797819137574,
+      "metrics": {
+        "mean_dice_fg": 0.08337556570768356,
+        "classes": {
+          "background": {
+            "dice": 0.9297633171081543,
+            "iou": 0.8687455058097839,
+            "precision": 0.9691572785377502,
+            "recall": 0.8934468030929565
+          },
+          "kidney": {
+            "dice": 0.20105516910552979,
+            "iou": 0.11176283657550812,
+            "precision": 0.1515350490808487,
+            "recall": 0.29865145683288574
+          },
+          "tumor": {
+            "dice": 0.0490715317428112,
+            "iou": 0.025152910500764847,
+            "precision": 0.027892958372831345,
+            "recall": 0.2038532942533493
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T15:55:45.224859",
+      "stage": "stage1",
+      "epoch": 5,
+      "epoch_time_minutes": 2.88,
+      "train_loss": 0.637896629795432,
+      "val_loss": 0.5832802772521972,
+      "metrics": {
+        "mean_dice_fg": 0.09650228172540665,
+        "classes": {
+          "background": {
+            "dice": 0.9406561851501465,
+            "iou": 0.887961208820343,
+            "precision": 0.9718846082687378,
+            "recall": 0.911372184753418
+          },
+          "kidney": {
+            "dice": 0.24274808168411255,
+            "iou": 0.1381407380104065,
+            "precision": 0.18110693991184235,
+            "recall": 0.3679995834827423
+          },
+          "tumor": {
+            "dice": 0.04675876721739769,
+            "iou": 0.023939063772559166,
+            "precision": 0.02819550782442093,
+            "recall": 0.13687220215797424
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T15:59:17.561507",
+      "stage": "stage1",
+      "epoch": 6,
+      "epoch_time_minutes": 3.23,
+      "train_loss": 0.6830198384821415,
+      "val_loss": 0.5834905922412872,
+      "metrics": {
+        "mean_dice_fg": 0.10107003897428513,
+        "classes": {
+          "background": {
+            "dice": 0.9441371560096741,
+            "iou": 0.8941853046417236,
+            "precision": 0.9694668054580688,
+            "recall": 0.920097291469574
+          },
+          "kidney": {
+            "dice": 0.19029705226421356,
+            "iou": 0.10515374690294266,
+            "precision": 0.15324528515338898,
+            "recall": 0.25097891688346863
+          },
+          "tumor": {
+            "dice": 0.11291305720806122,
+            "iou": 0.05983458086848259,
+            "precision": 0.06754805147647858,
+            "recall": 0.34382370114326477
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true,
+      "vlm_critic_feedback": {
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          15.0,
+          10.0
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.5,
+          "cyst": 0.25,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {},
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T16:02:08.385179",
+      "stage": "stage1",
+      "epoch": 7,
+      "epoch_time_minutes": 2.76,
+      "train_loss": 0.6346686784178018,
+      "val_loss": 0.5623109459877014,
+      "metrics": {
+        "mean_dice_fg": 0.13105100393295288,
+        "classes": {
+          "background": {
+            "dice": 0.9421839714050293,
+            "iou": 0.890687882900238,
+            "precision": 0.9778109788894653,
+            "recall": 0.909061849117279
+          },
+          "kidney": {
+            "dice": 0.32752299308776855,
+            "iou": 0.1958310902118683,
+            "precision": 0.23861199617385864,
+            "recall": 0.5220467448234558
+          },
+          "tumor": {
+            "dice": 0.06563002616167068,
+            "iou": 0.03392837569117546,
+            "precision": 0.03906545042991638,
+            "recall": 0.2050950825214386
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T16:05:05.201597",
+      "stage": "stage1",
+      "epoch": 8,
+      "epoch_time_minutes": 2.79,
+      "train_loss": 0.5722905538976193,
+      "val_loss": 0.5663541555404663,
+      "metrics": {
+        "mean_dice_fg": 0.12498292326927185,
+        "classes": {
+          "background": {
+            "dice": 0.9415189623832703,
+            "iou": 0.8895001411437988,
+            "precision": 0.9760042428970337,
+            "recall": 0.9093875885009766
+          },
+          "kidney": {
+            "dice": 0.2901911735534668,
+            "iou": 0.16972140967845917,
+            "precision": 0.21301405131816864,
+            "recall": 0.4550662338733673
+          },
+          "tumor": {
+            "dice": 0.08475758880376816,
+            "iou": 0.04425423592329025,
+            "precision": 0.05052502080798149,
+            "recall": 0.2628443241119385
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T16:07:52.236732",
+      "stage": "stage1",
+      "epoch": 9,
+      "epoch_time_minutes": 2.78,
+      "train_loss": 0.5858022820204496,
+      "val_loss": 0.5769368410110474,
+      "metrics": {
+        "mean_dice_fg": 0.11682015657424927,
+        "classes": {
+          "background": {
+            "dice": 0.9444753527641296,
+            "iou": 0.8947923183441162,
+            "precision": 0.9763174057006836,
+            "recall": 0.9146446585655212
+          },
+          "kidney": {
+            "dice": 0.28994521498680115,
+            "iou": 0.16955317556858063,
+            "precision": 0.21467311680316925,
+            "recall": 0.4465063810348511
+          },
+          "tumor": {
+            "dice": 0.06051526963710785,
+            "iou": 0.031201723963022232,
+            "precision": 0.03661351278424263,
+            "recall": 0.17430134117603302
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false,
+      "vlm_critic_feedback": {
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          15.0,
+          10.0
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.5,
+          "cyst": 0.25,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {},
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T16:10:34.928917",
+      "stage": "stage1",
+      "epoch": 10,
+      "epoch_time_minutes": 2.71,
+      "train_loss": 0.5838812455534935,
+      "val_loss": 0.5651346772909165,
+      "metrics": {
+        "mean_dice_fg": 0.13183526694774628,
+        "classes": {
+          "background": {
+            "dice": 0.9458286166191101,
+            "iou": 0.8972246050834656,
+            "precision": 0.9761433005332947,
+            "recall": 0.9173399806022644
+          },
+          "kidney": {
+            "dice": 0.29140007495880127,
+            "iou": 0.17054903507232666,
+            "precision": 0.22115470468997955,
+            "recall": 0.42704111337661743
+          },
+          "tumor": {
+            "dice": 0.10410574823617935,
+            "iou": 0.054911158978939056,
+            "precision": 0.0623893141746521,
+            "recall": 0.31418392062187195
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T16:13:49.687374",
+      "stage": "stage1",
+      "epoch": 11,
+      "epoch_time_minutes": 3.04,
+      "train_loss": 0.5567420676350594,
+      "val_loss": 0.5805178165435791,
+      "metrics": {
+        "mean_dice_fg": 0.11560249328613281,
+        "classes": {
+          "background": {
+            "dice": 0.9454877972602844,
+            "iou": 0.8966116309165955,
+            "precision": 0.9751366972923279,
+            "recall": 0.9175887703895569
+          },
+          "kidney": {
+            "dice": 0.2732660174369812,
+            "iou": 0.15825599431991577,
+            "precision": 0.2045639157295227,
+            "recall": 0.4114501178264618
+          },
+          "tumor": {
+            "dice": 0.07354147732257843,
+            "iou": 0.03817444294691086,
+            "precision": 0.044937871396541595,
+            "recall": 0.20232301950454712
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T16:16:28.651902",
+      "stage": "stage1",
+      "epoch": 12,
+      "epoch_time_minutes": 2.65,
+      "train_loss": 0.6545342721045018,
+      "val_loss": 0.5600879549980163,
+      "metrics": {
+        "mean_dice_fg": 0.14954088628292084,
+        "classes": {
+          "background": {
+            "dice": 0.9506306648254395,
+            "iou": 0.905906617641449,
+            "precision": 0.9783037900924683,
+            "recall": 0.9244800209999084
+          },
+          "kidney": {
+            "dice": 0.33953621983528137,
+            "iou": 0.20448274910449982,
+            "precision": 0.26440322399139404,
+            "recall": 0.4743190407752991
+          },
+          "tumor": {
+            "dice": 0.10908645391464233,
+            "iou": 0.057689815759658813,
+            "precision": 0.06558001041412354,
+            "recall": 0.32409313321113586
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true,
+      "vlm_critic_feedback": {
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          15.0,
+          10.0
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.5,
+          "cyst": 0.25,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {},
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T16:19:31.767692",
+      "stage": "stage1",
+      "epoch": 13,
+      "epoch_time_minutes": 2.89,
+      "train_loss": 0.5497662022709846,
+      "val_loss": 0.5665931969881057,
+      "metrics": {
+        "mean_dice_fg": 0.13243457674980164,
+        "classes": {
+          "background": {
+            "dice": 0.944940447807312,
+            "iou": 0.8956276774406433,
+            "precision": 0.9765110015869141,
+            "recall": 0.9153473973274231
+          },
+          "kidney": {
+            "dice": 0.2894066274166107,
+            "iou": 0.16918493807315826,
+            "precision": 0.21185500919818878,
+            "recall": 0.4565204679965973
+          },
+          "tumor": {
+            "dice": 0.10789709538221359,
+            "iou": 0.057024963200092316,
+            "precision": 0.06636001169681549,
+            "recall": 0.2884451448917389
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T16:22:16.910189",
+      "stage": "stage1",
+      "epoch": 14,
+      "epoch_time_minutes": 2.75,
+      "train_loss": 0.603903130069375,
+      "val_loss": 0.5620394974946976,
+      "metrics": {
+        "mean_dice_fg": 0.14282453060150146,
+        "classes": {
+          "background": {
+            "dice": 0.9478841423988342,
+            "iou": 0.9009313583374023,
+            "precision": 0.9770845770835876,
+            "recall": 0.9203783869743347
+          },
+          "kidney": {
+            "dice": 0.30333590507507324,
+            "iou": 0.17878371477127075,
+            "precision": 0.22731707990169525,
+            "recall": 0.45574507117271423
+          },
+          "tumor": {
+            "dice": 0.12513770163059235,
+            "iou": 0.06674500554800034,
+            "precision": 0.07679778337478638,
+            "recall": 0.33770257234573364
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T16:25:03.440106",
+      "stage": "stage1",
+      "epoch": 15,
+      "epoch_time_minutes": 2.78,
+      "train_loss": 0.5668648585677147,
+      "val_loss": 0.5624139398336411,
+      "metrics": {
+        "mean_dice_fg": 0.1425483375787735,
+        "classes": {
+          "background": {
+            "dice": 0.9480612277984619,
+            "iou": 0.9012514352798462,
+            "precision": 0.9772160649299622,
+            "recall": 0.9205957651138306
+          },
+          "kidney": {
+            "dice": 0.3080281913280487,
+            "iou": 0.18205277621746063,
+            "precision": 0.23089787364006042,
+            "recall": 0.46253612637519836
+          },
+          "tumor": {
+            "dice": 0.11961679905653,
+            "iou": 0.06361299008131027,
+            "precision": 0.07342659682035446,
+            "recall": 0.32247504591941833
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false,
+      "vlm_critic_feedback": {
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          15.0,
+          10.0
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.5,
+          "cyst": 0.25,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {},
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T16:28:16.950325",
+      "stage": "stage2",
+      "epoch": 1,
+      "epoch_time_minutes": 3.08,
+      "train_loss": 0.650005991384387,
+      "val_loss": 0.5643605887889862,
+      "metrics": {
+        "mean_dice_fg": 0.13649098575115204,
+        "classes": {
+          "background": {
+            "dice": 0.9467154145240784,
+            "iou": 0.8988221287727356,
+            "precision": 0.9770116806030273,
+            "recall": 0.9182416200637817
+          },
+          "kidney": {
+            "dice": 0.3010653853416443,
+            "iou": 0.1772083342075348,
+            "precision": 0.22619584202766418,
+            "recall": 0.4500191807746887
+          },
+          "tumor": {
+            "dice": 0.10840756446123123,
+            "iou": 0.05731021240353584,
+            "precision": 0.06559663265943527,
+            "recall": 0.312089204788208
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T16:30:58.334800",
+      "stage": "stage2",
+      "epoch": 2,
+      "epoch_time_minutes": 2.6,
+      "train_loss": 0.6139705624431372,
+      "val_loss": 0.5587798923254013,
+      "metrics": {
+        "mean_dice_fg": 0.1462053507566452,
+        "classes": {
+          "background": {
+            "dice": 0.9483283162117004,
+            "iou": 0.9017342329025269,
+            "precision": 0.9776598811149597,
+            "recall": 0.9207054972648621
+          },
+          "kidney": {
+            "dice": 0.3079211711883545,
+            "iou": 0.1819780319929123,
+            "precision": 0.23175154626369476,
+            "recall": 0.4586728513240814
+          },
+          "tumor": {
+            "dice": 0.13069485127925873,
+            "iou": 0.06991627812385559,
+            "precision": 0.0797271877527237,
+            "recall": 0.3623124659061432
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T16:34:03.367110",
+      "stage": "stage2",
+      "epoch": 3,
+      "epoch_time_minutes": 3.0,
+      "train_loss": 0.5436193689703941,
+      "val_loss": 0.5679255425930023,
+      "metrics": {
+        "mean_dice_fg": 0.1340508908033371,
+        "classes": {
+          "background": {
+            "dice": 0.9471563696861267,
+            "iou": 0.8996173739433289,
+            "precision": 0.9763251543045044,
+            "recall": 0.9196799397468567
+          },
+          "kidney": {
+            "dice": 0.29094189405441284,
+            "iou": 0.17023523151874542,
+            "precision": 0.2186228632926941,
+            "recall": 0.4347565770149231
+          },
+          "tumor": {
+            "dice": 0.11121075600385666,
+            "iou": 0.05887938663363457,
+            "precision": 0.06804817914962769,
+            "recall": 0.3040991425514221
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false,
+      "vlm_critic_feedback": {
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          15.0,
+          10.0
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.5,
+          "cyst": 0.25,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {},
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T16:36:53.879445",
+      "stage": "stage2",
+      "epoch": 4,
+      "epoch_time_minutes": 2.84,
+      "train_loss": 0.564604551717639,
+      "val_loss": 0.568143904209137,
+      "metrics": {
+        "mean_dice_fg": 0.13311702013015747,
+        "classes": {
+          "background": {
+            "dice": 0.9463553428649902,
+            "iou": 0.8981730937957764,
+            "precision": 0.9763050675392151,
+            "recall": 0.9181883931159973
+          },
+          "kidney": {
+            "dice": 0.2938823401927948,
+            "iou": 0.1722520887851715,
+            "precision": 0.22306470572948456,
+            "recall": 0.4305815100669861
+          },
+          "tumor": {
+            "dice": 0.1054687350988388,
+            "iou": 0.05567009374499321,
+            "precision": 0.06340724229812622,
+            "recall": 0.31329336762428284
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T16:39:34.961937",
+      "stage": "stage2",
+      "epoch": 5,
+      "epoch_time_minutes": 2.68,
+      "train_loss": 0.6646155714988708,
+      "val_loss": 0.5596143633127213,
+      "metrics": {
+        "mean_dice_fg": 0.14967651665210724,
+        "classes": {
+          "background": {
+            "dice": 0.949455201625824,
+            "iou": 0.9037742614746094,
+            "precision": 0.9786730408668518,
+            "recall": 0.9219314455986023
+          },
+          "kidney": {
+            "dice": 0.3351980149745941,
+            "iou": 0.2013440877199173,
+            "precision": 0.2539477050304413,
+            "recall": 0.4929012656211853
+          },
+          "tumor": {
+            "dice": 0.1138315498828888,
+            "iou": 0.0603506825864315,
+            "precision": 0.06907743960618973,
+            "recall": 0.3232778012752533
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T16:42:37.441968",
+      "stage": "stage2",
+      "epoch": 6,
+      "epoch_time_minutes": 2.85,
+      "train_loss": 0.6754894349724054,
+      "val_loss": 0.5568422496318817,
+      "metrics": {
+        "mean_dice_fg": 0.152725949883461,
+        "classes": {
+          "background": {
+            "dice": 0.9494501352310181,
+            "iou": 0.9037649631500244,
+            "precision": 0.9783734679222107,
+            "recall": 0.922187864780426
+          },
+          "kidney": {
+            "dice": 0.32921427488327026,
+            "iou": 0.1970415860414505,
+            "precision": 0.25095316767692566,
+            "recall": 0.4784085750579834
+          },
+          "tumor": {
+            "dice": 0.12896357476711273,
+            "iou": 0.06892627477645874,
+            "precision": 0.07802378386259079,
+            "recall": 0.3715192377567291
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true,
+      "vlm_critic_feedback": {
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          15.0,
+          10.0
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.5,
+          "cyst": 0.25,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {},
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T16:45:25.595779",
+      "stage": "stage2",
+      "epoch": 7,
+      "epoch_time_minutes": 2.63,
+      "train_loss": 0.61194127202034,
+      "val_loss": 0.5578321546316147,
+      "metrics": {
+        "mean_dice_fg": 0.1480463296175003,
+        "classes": {
+          "background": {
+            "dice": 0.9479774236679077,
+            "iou": 0.9010998010635376,
+            "precision": 0.9778124094009399,
+            "recall": 0.9199091196060181
+          },
+          "kidney": {
+            "dice": 0.3094257712364197,
+            "iou": 0.18302997946739197,
+            "precision": 0.23239892721176147,
+            "recall": 0.46282586455345154
+          },
+          "tumor": {
+            "dice": 0.13471320271492004,
+            "iou": 0.07222117483615875,
+            "precision": 0.08193539083003998,
+            "recall": 0.3785560131072998
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T16:48:12.875816",
+      "stage": "stage2",
+      "epoch": 8,
+      "epoch_time_minutes": 2.79,
+      "train_loss": 0.5558358136564493,
+      "val_loss": 0.5546319633722305,
+      "metrics": {
+        "mean_dice_fg": 0.154226154088974,
+        "classes": {
+          "background": {
+            "dice": 0.9493524432182312,
+            "iou": 0.903588056564331,
+            "precision": 0.9784584641456604,
+            "recall": 0.9219281673431396
+          },
+          "kidney": {
+            "dice": 0.3184899091720581,
+            "iou": 0.189407080411911,
+            "precision": 0.23878325521945953,
+            "recall": 0.4780718982219696
+          },
+          "tumor": {
+            "dice": 0.1441885530948639,
+            "iou": 0.07769569009542465,
+            "precision": 0.08857662975788116,
+            "recall": 0.3874366581439972
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T16:51:32.917979",
+      "stage": "stage2",
+      "epoch": 9,
+      "epoch_time_minutes": 3.16,
+      "train_loss": 0.563866725936532,
+      "val_loss": 0.5533171743154526,
+      "metrics": {
+        "mean_dice_fg": 0.1564348340034485,
+        "classes": {
+          "background": {
+            "dice": 0.9497718214988708,
+            "iou": 0.9043480157852173,
+            "precision": 0.9787290096282959,
+            "recall": 0.9224788546562195
+          },
+          "kidney": {
+            "dice": 0.32277539372444153,
+            "iou": 0.19244612753391266,
+            "precision": 0.24262560904026031,
+            "recall": 0.482001394033432
+          },
+          "tumor": {
+            "dice": 0.14652910828590393,
+            "iou": 0.07905659824609756,
+            "precision": 0.08990399539470673,
+            "recall": 0.395853191614151
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true,
+      "vlm_critic_feedback": {
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          15.0,
+          10.0
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.5,
+          "cyst": 0.25,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {},
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T16:54:30.050203",
+      "stage": "stage2",
+      "epoch": 10,
+      "epoch_time_minutes": 2.79,
+      "train_loss": 0.5726137354969978,
+      "val_loss": 0.5532011657953262,
+      "metrics": {
+        "mean_dice_fg": 0.1564621478319168,
+        "classes": {
+          "background": {
+            "dice": 0.9497619867324829,
+            "iou": 0.9043301939964294,
+            "precision": 0.978774905204773,
+            "recall": 0.922419548034668
+          },
+          "kidney": {
+            "dice": 0.3236134946346283,
+            "iou": 0.19304229319095612,
+            "precision": 0.24342554807662964,
+            "recall": 0.4825836420059204
+          },
+          "tumor": {
+            "dice": 0.14577296376228333,
+            "iou": 0.07861656695604324,
+            "precision": 0.08931621164083481,
+            "recall": 0.39622950553894043
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T17:21:35.771662",
+      "stage": "stage1",
+      "epoch": 1,
+      "epoch_time_minutes": 2.97,
+      "train_loss": 0.992890128493309,
+      "val_loss": 0.7389433681964874,
+      "metrics": {
+        "mean_dice_fg": 0.020567959174513817,
+        "classes": {
+          "background": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "kidney": {
+            "dice": 0.0617038756608963,
+            "iou": 0.03183408081531525,
+            "precision": 0.03183408081531525,
+            "recall": 1.0
+          },
+          "tumor": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T17:25:03.859187",
+      "stage": "stage1",
+      "epoch": 2,
+      "epoch_time_minutes": 3.31,
+      "train_loss": 0.9047973908483982,
+      "val_loss": 0.7107689261436463,
+      "metrics": {
+        "mean_dice_fg": 0.00463666208088398,
+        "classes": {
+          "background": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "kidney": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "tumor": {
+            "dice": 0.01390998624265194,
+            "iou": 0.007003703620284796,
+            "precision": 0.007003703620284796,
+            "recall": 1.0
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T17:28:01.015417",
+      "stage": "stage1",
+      "epoch": 3,
+      "epoch_time_minutes": 2.86,
+      "train_loss": 0.8051109798252583,
+      "val_loss": 0.7016102552413941,
+      "metrics": {
+        "mean_dice_fg": 0.004636600613594055,
+        "classes": {
+          "background": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "kidney": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "tumor": {
+            "dice": 0.013909801840782166,
+            "iou": 0.007003610022366047,
+            "precision": 0.007003610022366047,
+            "recall": 1.0
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false,
+      "vlm_critic_feedback": {
+        "epoch": 3,
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          24.0,
+          37.5
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.5,
+          "cyst": 0.25,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {
+          "kidney": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "tumor": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "cyst": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          }
+        },
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T17:30:53.712238",
+      "stage": "stage1",
+      "epoch": 4,
+      "epoch_time_minutes": 2.79,
+      "train_loss": 0.7827209092676639,
+      "val_loss": 0.7043328583240509,
+      "metrics": {
+        "mean_dice_fg": 0.03445446863770485,
+        "classes": {
+          "background": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "kidney": {
+            "dice": 0.08933667093515396,
+            "iou": 0.046756889671087265,
+            "precision": 0.21334417164325714,
+            "recall": 0.056497298181056976
+          },
+          "tumor": {
+            "dice": 0.014026733115315437,
+            "iou": 0.007062901277095079,
+            "precision": 0.007062901277095079,
+            "recall": 1.0
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T17:33:44.526018",
+      "stage": "stage1",
+      "epoch": 5,
+      "epoch_time_minutes": 2.76,
+      "train_loss": 0.7612957328557968,
+      "val_loss": 0.7040313243865967,
+      "metrics": {
+        "mean_dice_fg": 0.052645426243543625,
+        "classes": {
+          "background": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "kidney": {
+            "dice": 0.14372381567955017,
+            "iou": 0.07742587476968765,
+            "precision": 0.17757399380207062,
+            "recall": 0.12071282416582108
+          },
+          "tumor": {
+            "dice": 0.014212463982403278,
+            "iou": 0.0071570915170013905,
+            "precision": 0.007157099898904562,
+            "recall": 0.9998369216918945
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T17:36:54.910905",
+      "stage": "stage1",
+      "epoch": 6,
+      "epoch_time_minutes": 3.0,
+      "train_loss": 0.7369024962186813,
+      "val_loss": 0.6981697142124176,
+      "metrics": {
+        "mean_dice_fg": 0.06233730539679527,
+        "classes": {
+          "background": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "kidney": {
+            "dice": 0.17264212667942047,
+            "iou": 0.0944763645529747,
+            "precision": 0.17102719843387604,
+            "recall": 0.1742878556251526
+          },
+          "tumor": {
+            "dice": 0.014369792304933071,
+            "iou": 0.007236892357468605,
+            "precision": 0.007236901670694351,
+            "recall": 0.9998244047164917
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true,
+      "vlm_critic_feedback": {
+        "epoch": 6,
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          28.80000114440918,
+          56.25
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.5,
+          "cyst": 0.25,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {
+          "kidney": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "tumor": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "cyst": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          }
+        },
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T17:42:43.969504",
+      "stage": "stage1",
+      "epoch": 1,
+      "epoch_time_minutes": 2.74,
+      "train_loss": 0.8094058617949486,
+      "val_loss": 0.726594215631485,
+      "metrics": {
+        "mean_dice_fg": 0.024079499766230583,
+        "classes": {
+          "background": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "kidney": {
+            "dice": 0.06638588756322861,
+            "iou": 0.03433254361152649,
+            "precision": 0.034332599490880966,
+            "recall": 0.9999530911445618
+          },
+          "tumor": {
+            "dice": 0.005852612666785717,
+            "iou": 0.002934894757345319,
+            "precision": 0.0032077496871352196,
+            "recall": 0.0333525650203228
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T17:45:45.718777",
+      "stage": "stage1",
+      "epoch": 2,
+      "epoch_time_minutes": 2.84,
+      "train_loss": 0.7087120205163956,
+      "val_loss": 0.7092819392681122,
+      "metrics": {
+        "mean_dice_fg": 0.05189096927642822,
+        "classes": {
+          "background": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "kidney": {
+            "dice": 0.14140911400318146,
+            "iou": 0.07608404755592346,
+            "precision": 0.16064107418060303,
+            "recall": 0.1262897104024887
+          },
+          "tumor": {
+            "dice": 0.014263799414038658,
+            "iou": 0.00718312943354249,
+            "precision": 0.00718312943354249,
+            "recall": 1.0
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T17:49:15.894504",
+      "stage": "stage1",
+      "epoch": 3,
+      "epoch_time_minutes": 3.31,
+      "train_loss": 0.6933828890323639,
+      "val_loss": 0.6999430537223816,
+      "metrics": {
+        "mean_dice_fg": 0.05039726570248604,
+        "classes": {
+          "background": {
+            "dice": 0.3482068181037903,
+            "iou": 0.21080534160137177,
+            "precision": 0.9990217685699463,
+            "recall": 0.210848867893219
+          },
+          "kidney": {
+            "dice": 0.13222329318523407,
+            "iou": 0.0707918107509613,
+            "precision": 0.09802485257387161,
+            "recall": 0.2030690759420395
+          },
+          "tumor": {
+            "dice": 0.01896851323544979,
+            "iou": 0.009575068950653076,
+            "precision": 0.00957509595900774,
+            "recall": 0.9996989369392395
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false,
+      "vlm_critic_feedback": {
+        "epoch": 3,
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          15.59999942779541,
+          4.800000190734863
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.65,
+          "cyst": 0.1,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {
+          "kidney": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "tumor": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "cyst": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          }
+        },
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T17:52:21.386382",
+      "stage": "stage1",
+      "epoch": 4,
+      "epoch_time_minutes": 3.0,
+      "train_loss": 0.6816651538014412,
+      "val_loss": 0.6917361736297607,
+      "metrics": {
+        "mean_dice_fg": 0.05712957680225372,
+        "classes": {
+          "background": {
+            "dice": 0.853307843208313,
+            "iou": 0.7441473007202148,
+            "precision": 0.9626522660255432,
+            "recall": 0.766269862651825
+          },
+          "kidney": {
+            "dice": 0.12542752921581268,
+            "iou": 0.06690993905067444,
+            "precision": 0.09931837767362595,
+            "recall": 0.1701596975326538
+          },
+          "tumor": {
+            "dice": 0.045961201190948486,
+            "iou": 0.02352113090455532,
+            "precision": 0.0238728579133749,
+            "recall": 0.6148587465286255
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T17:55:31.004074",
+      "stage": "stage1",
+      "epoch": 5,
+      "epoch_time_minutes": 2.98,
+      "train_loss": 0.6819520939141512,
+      "val_loss": 0.6756835222244263,
+      "metrics": {
+        "mean_dice_fg": 0.09621068090200424,
+        "classes": {
+          "background": {
+            "dice": 0.9159195423126221,
+            "iou": 0.8448815941810608,
+            "precision": 0.9712702631950378,
+            "recall": 0.8665373921394348
+          },
+          "kidney": {
+            "dice": 0.20228096842765808,
+            "iou": 0.11252091079950333,
+            "precision": 0.14823004603385925,
+            "recall": 0.31837335228919983
+          },
+          "tumor": {
+            "dice": 0.08635105192661285,
+            "iou": 0.04512377083301544,
+            "precision": 0.047255806624889374,
+            "recall": 0.5000376105308533
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T17:58:46.985208",
+      "stage": "stage1",
+      "epoch": 6,
+      "epoch_time_minutes": 3.0,
+      "train_loss": 0.6198681317269802,
+      "val_loss": 0.6772691667079925,
+      "metrics": {
+        "mean_dice_fg": 0.07620441913604736,
+        "classes": {
+          "background": {
+            "dice": 0.9235163927078247,
+            "iou": 0.8579009771347046,
+            "precision": 0.9672373533248901,
+            "recall": 0.8835769891738892
+          },
+          "kidney": {
+            "dice": 0.1354968547821045,
+            "iou": 0.07267183065414429,
+            "precision": 0.09958901256322861,
+            "recall": 0.21189936995506287
+          },
+          "tumor": {
+            "dice": 0.093116395175457,
+            "iou": 0.04883171245455742,
+            "precision": 0.05256994813680649,
+            "recall": 0.40712958574295044
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false,
+      "vlm_critic_feedback": {
+        "epoch": 6,
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          20.279998779296875,
+          5.760000228881836
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.65,
+          "cyst": 0.1,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {
+          "kidney": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "tumor": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "cyst": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          }
+        },
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T18:01:24.919574",
+      "stage": "stage1",
+      "epoch": 7,
+      "epoch_time_minutes": 2.63,
+      "train_loss": 0.658817795291543,
+      "val_loss": 0.6954511106014252,
+      "metrics": {
+        "mean_dice_fg": 0.08250609785318375,
+        "classes": {
+          "background": {
+            "dice": 0.9286360740661621,
+            "iou": 0.8667792081832886,
+            "precision": 0.9700830578804016,
+            "recall": 0.8905854821205139
+          },
+          "kidney": {
+            "dice": 0.20042020082473755,
+            "iou": 0.11137055605649948,
+            "precision": 0.14746546745300293,
+            "recall": 0.31271645426750183
+          },
+          "tumor": {
+            "dice": 0.04709810018539429,
+            "iou": 0.024116981774568558,
+            "precision": 0.02684115432202816,
+            "recall": 0.1919998973608017
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T18:04:09.871907",
+      "stage": "stage1",
+      "epoch": 8,
+      "epoch_time_minutes": 2.75,
+      "train_loss": 0.7327917113900184,
+      "val_loss": 0.6798193633556366,
+      "metrics": {
+        "mean_dice_fg": 0.10707571357488632,
+        "classes": {
+          "background": {
+            "dice": 0.939568281173706,
+            "iou": 0.8860243558883667,
+            "precision": 0.971752941608429,
+            "recall": 0.9094472527503967
+          },
+          "kidney": {
+            "dice": 0.23082487285137177,
+            "iou": 0.13047033548355103,
+            "precision": 0.17857876420021057,
+            "recall": 0.3262847363948822
+          },
+          "tumor": {
+            "dice": 0.0904022678732872,
+            "iou": 0.0473410002887249,
+            "precision": 0.05268491804599762,
+            "recall": 0.31821033358573914
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T18:07:01.965791",
+      "stage": "stage1",
+      "epoch": 9,
+      "epoch_time_minutes": 2.78,
+      "train_loss": 0.7287623431533575,
+      "val_loss": 0.7007325112819671,
+      "metrics": {
+        "mean_dice_fg": 0.08614750951528549,
+        "classes": {
+          "background": {
+            "dice": 0.9344856142997742,
+            "iou": 0.8770277500152588,
+            "precision": 0.9700695872306824,
+            "recall": 0.9014198780059814
+          },
+          "kidney": {
+            "dice": 0.1973751038312912,
+            "iou": 0.10949316620826721,
+            "precision": 0.14461523294448853,
+            "recall": 0.31074342131614685
+          },
+          "tumor": {
+            "dice": 0.061067402362823486,
+            "iou": 0.03149537369608879,
+            "precision": 0.03609473258256912,
+            "recall": 0.19818373024463654
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false,
+      "vlm_critic_feedback": {
+        "epoch": 9,
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          26.363996505737305,
+          6.91200065612793
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.65,
+          "cyst": 0.1,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {
+          "kidney": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "tumor": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "cyst": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          }
+        },
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T18:10:00.293598",
+      "stage": "stage1",
+      "epoch": 10,
+      "epoch_time_minutes": 2.97,
+      "train_loss": 0.6459460012614727,
+      "val_loss": 0.7189834952354431,
+      "metrics": {
+        "mean_dice_fg": 0.08956741541624069,
+        "classes": {
+          "background": {
+            "dice": 0.9338116645812988,
+            "iou": 0.8758410811424255,
+            "precision": 0.9706590175628662,
+            "recall": 0.8996594548225403
+          },
+          "kidney": {
+            "dice": 0.20077964663505554,
+            "iou": 0.11159257590770721,
+            "precision": 0.1437147557735443,
+            "recall": 0.3330067992210388
+          },
+          "tumor": {
+            "dice": 0.06792259216308594,
+            "iou": 0.03515521064400673,
+            "precision": 0.04068411886692047,
+            "recall": 0.20552155375480652
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T18:12:59.679973",
+      "stage": "stage2",
+      "epoch": 1,
+      "epoch_time_minutes": 2.92,
+      "train_loss": 0.7361311435699462,
+      "val_loss": 0.7125485956668853,
+      "metrics": {
+        "mean_dice_fg": 0.09094568341970444,
+        "classes": {
+          "background": {
+            "dice": 0.9378476738929749,
+            "iou": 0.8829692006111145,
+            "precision": 0.970176100730896,
+            "recall": 0.9076043963432312
+          },
+          "kidney": {
+            "dice": 0.21939854323863983,
+            "iou": 0.12321597337722778,
+            "precision": 0.1659674495458603,
+            "recall": 0.3235666751861572
+          },
+          "tumor": {
+            "dice": 0.05343851447105408,
+            "iou": 0.027452774345874786,
+            "precision": 0.03154643625020981,
+            "recall": 0.17461492121219635
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T18:15:45.219090",
+      "stage": "stage2",
+      "epoch": 2,
+      "epoch_time_minutes": 2.68,
+      "train_loss": 0.809581895545125,
+      "val_loss": 0.7226097285747528,
+      "metrics": {
+        "mean_dice_fg": 0.08665699511766434,
+        "classes": {
+          "background": {
+            "dice": 0.9373505711555481,
+            "iou": 0.882088303565979,
+            "precision": 0.9698314666748047,
+            "recall": 0.9069748520851135
+          },
+          "kidney": {
+            "dice": 0.22915413975715637,
+            "iou": 0.12940378487110138,
+            "precision": 0.1764664649963379,
+            "recall": 0.32669588923454285
+          },
+          "tumor": {
+            "dice": 0.030816860496997833,
+            "iou": 0.015649566426873207,
+            "precision": 0.017965730279684067,
+            "recall": 0.10824845731258392
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T18:18:19.681420",
+      "stage": "stage2",
+      "epoch": 3,
+      "epoch_time_minutes": 2.57,
+      "train_loss": 0.7101740200072527,
+      "val_loss": 0.7232680082321167,
+      "metrics": {
+        "mean_dice_fg": 0.08035300672054291,
+        "classes": {
+          "background": {
+            "dice": 0.9373040199279785,
+            "iou": 0.8820058107376099,
+            "precision": 0.9686405062675476,
+            "recall": 0.9079315662384033
+          },
+          "kidney": {
+            "dice": 0.19880446791648865,
+            "iou": 0.1103736162185669,
+            "precision": 0.1515178680419922,
+            "recall": 0.2889960706233978
+          },
+          "tumor": {
+            "dice": 0.042254555970430374,
+            "iou": 0.021583274006843567,
+            "precision": 0.024984542280435562,
+            "recall": 0.136847123503685
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false,
+      "vlm_critic_feedback": {
+        "epoch": 3,
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          34.273193359375,
+          8.294401168823242
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.65,
+          "cyst": 0.1,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {
+          "kidney": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "tumor": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "cyst": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          }
+        },
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T18:21:05.370267",
+      "stage": "stage2",
+      "epoch": 4,
+      "epoch_time_minutes": 2.76,
+      "train_loss": 0.7536158092319966,
+      "val_loss": 0.743576318025589,
+      "metrics": {
+        "mean_dice_fg": 0.08730889111757278,
+        "classes": {
+          "background": {
+            "dice": 0.9368999004364014,
+            "iou": 0.8812904357910156,
+            "precision": 0.9697164297103882,
+            "recall": 0.9062318205833435
+          },
+          "kidney": {
+            "dice": 0.2133825421333313,
+            "iou": 0.11943382024765015,
+            "precision": 0.16119369864463806,
+            "recall": 0.31554490327835083
+          },
+          "tumor": {
+            "dice": 0.048544131219387054,
+            "iou": 0.024875853210687637,
+            "precision": 0.02858148142695427,
+            "recall": 0.16098038852214813
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T18:24:01.083025",
+      "stage": "stage2",
+      "epoch": 5,
+      "epoch_time_minutes": 2.93,
+      "train_loss": 0.8044987943023443,
+      "val_loss": 0.7440816104412079,
+      "metrics": {
+        "mean_dice_fg": 0.08844354003667831,
+        "classes": {
+          "background": {
+            "dice": 0.9374669790267944,
+            "iou": 0.8822945356369019,
+            "precision": 0.9699611067771912,
+            "recall": 0.9070795178413391
+          },
+          "kidney": {
+            "dice": 0.21811194717884064,
+            "iou": 0.12240497022867203,
+            "precision": 0.16461804509162903,
+            "recall": 0.32310858368873596
+          },
+          "tumor": {
+            "dice": 0.0472186803817749,
+            "iou": 0.02418021857738495,
+            "precision": 0.02788563072681427,
+            "recall": 0.15395614504814148
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T18:26:54.829047",
+      "stage": "stage2",
+      "epoch": 6,
+      "epoch_time_minutes": 2.79,
+      "train_loss": 0.8408264946192503,
+      "val_loss": 0.7473854660987854,
+      "metrics": {
+        "mean_dice_fg": 0.08576083183288574,
+        "classes": {
+          "background": {
+            "dice": 0.9373496770858765,
+            "iou": 0.8820866942405701,
+            "precision": 0.969747006893158,
+            "recall": 0.9070470333099365
+          },
+          "kidney": {
+            "dice": 0.2114620953798294,
+            "iou": 0.11823181807994843,
+            "precision": 0.15827655792236328,
+            "recall": 0.3184809684753418
+          },
+          "tumor": {
+            "dice": 0.04582039266824722,
+            "iou": 0.02344738133251667,
+            "precision": 0.02725527435541153,
+            "recall": 0.14370828866958618
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false,
+      "vlm_critic_feedback": {
+        "epoch": 6,
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          40.0,
+          9.95328140258789
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.65,
+          "cyst": 0.1,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {
+          "kidney": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "tumor": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "cyst": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          }
+        },
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T20:11:15.961324",
+      "stage": "stage1",
+      "epoch": 1,
+      "epoch_time_minutes": 2.96,
+      "train_loss": 0.8014985792338848,
+      "val_loss": 0.722154700756073,
+      "metrics": {
+        "mean_dice_fg": 0.004636435303837061,
+        "classes": {
+          "background": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "kidney": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "tumor": {
+            "dice": 0.01390930637717247,
+            "iou": 0.007003359030932188,
+            "precision": 0.007003359030932188,
+            "recall": 1.0
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T20:14:42.100805",
+      "stage": "stage1",
+      "epoch": 2,
+      "epoch_time_minutes": 3.25,
+      "train_loss": 0.7256598100066185,
+      "val_loss": 0.7095762372016907,
+      "metrics": {
+        "mean_dice_fg": 0.0148728983476758,
+        "classes": {
+          "background": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "kidney": {
+            "dice": 0.03063499741256237,
+            "iou": 0.015555773861706257,
+            "precision": 0.10634110867977142,
+            "recall": 0.017895134165883064
+          },
+          "tumor": {
+            "dice": 0.013983696699142456,
+            "iou": 0.0070410785265266895,
+            "precision": 0.0070410785265266895,
+            "recall": 1.0
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T20:17:34.397395",
+      "stage": "stage1",
+      "epoch": 3,
+      "epoch_time_minutes": 2.69,
+      "train_loss": 0.7073710344731807,
+      "val_loss": 0.6968230843544007,
+      "metrics": {
+        "mean_dice_fg": 0.05834285542368889,
+        "classes": {
+          "background": {
+            "dice": 0.23131604492664337,
+            "iou": 0.130784273147583,
+            "precision": 0.9998337030410767,
+            "recall": 0.13078711926937103
+          },
+          "kidney": {
+            "dice": 0.15840327739715576,
+            "iou": 0.08601409941911697,
+            "precision": 0.1442175656557083,
+            "recall": 0.1756841391324997
+          },
+          "tumor": {
+            "dice": 0.016625287011265755,
+            "iou": 0.008382322266697884,
+            "precision": 0.008382322266697884,
+            "recall": 1.0
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true,
+      "vlm_critic_feedback": {
+        "epoch": 3,
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          10.200000762939453,
+          4.800000190734863
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.65,
+          "cyst": 0.1,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {
+          "kidney": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "tumor": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "cyst": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          }
+        },
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T20:20:50.936941",
+      "stage": "stage1",
+      "epoch": 4,
+      "epoch_time_minutes": 3.09,
+      "train_loss": 0.6710247829556465,
+      "val_loss": 0.6768224596977234,
+      "metrics": {
+        "mean_dice_fg": 0.08227532356977463,
+        "classes": {
+          "background": {
+            "dice": 0.929151713848114,
+            "iou": 0.8676782250404358,
+            "precision": 0.9710720777511597,
+            "recall": 0.8907009363174438
+          },
+          "kidney": {
+            "dice": 0.1786462664604187,
+            "iou": 0.09808433055877686,
+            "precision": 0.15526334941387177,
+            "recall": 0.21032094955444336
+          },
+          "tumor": {
+            "dice": 0.06817970424890518,
+            "iou": 0.035292986780405045,
+            "precision": 0.03726186230778694,
+            "recall": 0.40045657753944397
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T20:23:45.745411",
+      "stage": "stage1",
+      "epoch": 5,
+      "epoch_time_minutes": 2.73,
+      "train_loss": 0.6392688281834126,
+      "val_loss": 0.6684730827808381,
+      "metrics": {
+        "mean_dice_fg": 0.08924809098243713,
+        "classes": {
+          "background": {
+            "dice": 0.9426152110099792,
+            "iou": 0.8914589881896973,
+            "precision": 0.9697502851486206,
+            "recall": 0.9169573187828064
+          },
+          "kidney": {
+            "dice": 0.19588616490364075,
+            "iou": 0.10857749730348587,
+            "precision": 0.17667439579963684,
+            "recall": 0.2197859138250351
+          },
+          "tumor": {
+            "dice": 0.07185810059309006,
+            "iou": 0.037268057465553284,
+            "precision": 0.04080919921398163,
+            "recall": 0.30044904351234436
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T20:27:09.591798",
+      "stage": "stage1",
+      "epoch": 6,
+      "epoch_time_minutes": 3.09,
+      "train_loss": 0.6192037131637335,
+      "val_loss": 0.6625449538230896,
+      "metrics": {
+        "mean_dice_fg": 0.09695618599653244,
+        "classes": {
+          "background": {
+            "dice": 0.9467023015022278,
+            "iou": 0.898798406124115,
+            "precision": 0.9684909582138062,
+            "recall": 0.9258723855018616
+          },
+          "kidney": {
+            "dice": 0.1602196991443634,
+            "iou": 0.08708631992340088,
+            "precision": 0.12944918870925903,
+            "recall": 0.21018022298812866
+          },
+          "tumor": {
+            "dice": 0.13064885139465332,
+            "iou": 0.06988994777202606,
+            "precision": 0.08086096495389938,
+            "recall": 0.3399854600429535
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true,
+      "vlm_critic_feedback": {
+        "epoch": 6,
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          12.750000953674316,
+          5.760000228881836
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.65,
+          "cyst": 0.1,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {
+          "kidney": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "tumor": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "cyst": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          }
+        },
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T20:30:09.554682",
+      "stage": "stage1",
+      "epoch": 7,
+      "epoch_time_minutes": 2.84,
+      "train_loss": 0.6246429897844792,
+      "val_loss": 0.6560914933681488,
+      "metrics": {
+        "mean_dice_fg": 0.129444882273674,
+        "classes": {
+          "background": {
+            "dice": 0.9521718621253967,
+            "iou": 0.9087099432945251,
+            "precision": 0.9752291440963745,
+            "recall": 0.9301796555519104
+          },
+          "kidney": {
+            "dice": 0.24679529666900635,
+            "iou": 0.14076809585094452,
+            "precision": 0.2097851037979126,
+            "recall": 0.29966142773628235
+          },
+          "tumor": {
+            "dice": 0.14153936505317688,
+            "iou": 0.07615946233272552,
+            "precision": 0.08389373123645782,
+            "recall": 0.45238572359085083
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T20:33:18.625437",
+      "stage": "stage1",
+      "epoch": 8,
+      "epoch_time_minutes": 3.0,
+      "train_loss": 0.6658118139952421,
+      "val_loss": 0.6659066319465637,
+      "metrics": {
+        "mean_dice_fg": 0.12489307671785355,
+        "classes": {
+          "background": {
+            "dice": 0.94744473695755,
+            "iou": 0.9001377820968628,
+            "precision": 0.9730480909347534,
+            "recall": 0.9231542348861694
+          },
+          "kidney": {
+            "dice": 0.2672872543334961,
+            "iou": 0.15425941348075867,
+            "precision": 0.21351543068885803,
+            "recall": 0.35725975036621094
+          },
+          "tumor": {
+            "dice": 0.10739198327064514,
+            "iou": 0.05674285814166069,
+            "precision": 0.06448466330766678,
+            "recall": 0.32094475626945496
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T20:36:14.067977",
+      "stage": "stage1",
+      "epoch": 9,
+      "epoch_time_minutes": 2.92,
+      "train_loss": 0.6253331158310175,
+      "val_loss": 0.6519836366176606,
+      "metrics": {
+        "mean_dice_fg": 0.14984194934368134,
+        "classes": {
+          "background": {
+            "dice": 0.9532425403594971,
+            "iou": 0.9106621742248535,
+            "precision": 0.9790284037590027,
+            "recall": 0.9287800192832947
+          },
+          "kidney": {
+            "dice": 0.2980872690677643,
+            "iou": 0.1751483827829361,
+            "precision": 0.22683508694171906,
+            "recall": 0.4346020519733429
+          },
+          "tumor": {
+            "dice": 0.15143859386444092,
+            "iou": 0.08192240446805954,
+            "precision": 0.09523193538188934,
+            "recall": 0.369549959897995
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true,
+      "vlm_critic_feedback": {
+        "epoch": 9,
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          14.662500381469727,
+          6.91200065612793
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.65,
+          "cyst": 0.1,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {
+          "kidney": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "tumor": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "cyst": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          }
+        },
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T20:39:06.260137",
+      "stage": "stage1",
+      "epoch": 10,
+      "epoch_time_minutes": 2.71,
+      "train_loss": 0.6578007951378823,
+      "val_loss": 0.6661371469497681,
+      "metrics": {
+        "mean_dice_fg": 0.1374920755624771,
+        "classes": {
+          "background": {
+            "dice": 0.9501950740814209,
+            "iou": 0.9051159024238586,
+            "precision": 0.9757522344589233,
+            "recall": 0.925942599773407
+          },
+          "kidney": {
+            "dice": 0.3012186288833618,
+            "iou": 0.17731453478336334,
+            "precision": 0.24247810244560242,
+            "recall": 0.397517591714859
+          },
+          "tumor": {
+            "dice": 0.11125757545232773,
+            "iou": 0.05890563502907753,
+            "precision": 0.06653744727373123,
+            "recall": 0.33930811285972595
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T20:41:47.873088",
+      "stage": "stage1",
+      "epoch": 11,
+      "epoch_time_minutes": 2.59,
+      "train_loss": 0.646889940276742,
+      "val_loss": 0.6753452837467193,
+      "metrics": {
+        "mean_dice_fg": 0.14625594019889832,
+        "classes": {
+          "background": {
+            "dice": 0.9529781937599182,
+            "iou": 0.9101797938346863,
+            "precision": 0.9769404530525208,
+            "recall": 0.9301632046699524
+          },
+          "kidney": {
+            "dice": 0.34658434987068176,
+            "iou": 0.20961719751358032,
+            "precision": 0.27010318636894226,
+            "recall": 0.48348596692085266
+          },
+          "tumor": {
+            "dice": 0.09218347072601318,
+            "iou": 0.048318833112716675,
+            "precision": 0.05767146125435829,
+            "recall": 0.2295544594526291
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T20:44:27.606728",
+      "stage": "stage1",
+      "epoch": 12,
+      "epoch_time_minutes": 2.66,
+      "train_loss": 0.5876985307782888,
+      "val_loss": 0.6740944147109985,
+      "metrics": {
+        "mean_dice_fg": 0.14662480354309082,
+        "classes": {
+          "background": {
+            "dice": 0.954724133014679,
+            "iou": 0.9133704900741577,
+            "precision": 0.976811408996582,
+            "recall": 0.9336135983467102
+          },
+          "kidney": {
+            "dice": 0.33593687415122986,
+            "iou": 0.20187748968601227,
+            "precision": 0.2741510272026062,
+            "recall": 0.4336748719215393
+          },
+          "tumor": {
+            "dice": 0.1039375439286232,
+            "iou": 0.054817575961351395,
+            "precision": 0.06371481716632843,
+            "recall": 0.28189754486083984
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false,
+      "vlm_critic_feedback": {
+        "epoch": 12,
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          18.328125,
+          8.294401168823242
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.65,
+          "cyst": 0.1,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {
+          "kidney": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "tumor": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "cyst": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          }
+        },
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T20:47:14.668199",
+      "stage": "stage1",
+      "epoch": 13,
+      "epoch_time_minutes": 2.78,
+      "train_loss": 0.7315869424492121,
+      "val_loss": 0.6822327077388763,
+      "metrics": {
+        "mean_dice_fg": 0.1492549479007721,
+        "classes": {
+          "background": {
+            "dice": 0.9553441405296326,
+            "iou": 0.9145060777664185,
+            "precision": 0.9779044985771179,
+            "recall": 0.9338012337684631
+          },
+          "kidney": {
+            "dice": 0.3270895481109619,
+            "iou": 0.1955212503671646,
+            "precision": 0.2637843191623688,
+            "recall": 0.43037453293800354
+          },
+          "tumor": {
+            "dice": 0.12067530304193497,
+            "iou": 0.06421205401420593,
+            "precision": 0.0743081346154213,
+            "recall": 0.32093220949172974
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T20:50:10.070891",
+      "stage": "stage1",
+      "epoch": 14,
+      "epoch_time_minutes": 2.92,
+      "train_loss": 0.6038068251684308,
+      "val_loss": 0.6782129645347595,
+      "metrics": {
+        "mean_dice_fg": 0.1543084979057312,
+        "classes": {
+          "background": {
+            "dice": 0.9550467729568481,
+            "iou": 0.9139612913131714,
+            "precision": 0.9786399602890015,
+            "recall": 0.9325644373893738
+          },
+          "kidney": {
+            "dice": 0.3347703814506531,
+            "iou": 0.20103555917739868,
+            "precision": 0.2650102376937866,
+            "recall": 0.454379141330719
+          },
+          "tumor": {
+            "dice": 0.12815509736537933,
+            "iou": 0.06846459209918976,
+            "precision": 0.07928541302680969,
+            "recall": 0.3340650200843811
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T20:53:12.243777",
+      "stage": "stage1",
+      "epoch": 15,
+      "epoch_time_minutes": 2.85,
+      "train_loss": 0.538138223066926,
+      "val_loss": 0.6792805612087249,
+      "metrics": {
+        "mean_dice_fg": 0.15257011353969574,
+        "classes": {
+          "background": {
+            "dice": 0.95490962266922,
+            "iou": 0.9137101173400879,
+            "precision": 0.9784912467002869,
+            "recall": 0.9324378967285156
+          },
+          "kidney": {
+            "dice": 0.3286389708518982,
+            "iou": 0.19662955403327942,
+            "precision": 0.2591480314731598,
+            "recall": 0.4490533769130707
+          },
+          "tumor": {
+            "dice": 0.12907138466835022,
+            "iou": 0.0689878761768341,
+            "precision": 0.08016771078109741,
+            "recall": 0.3309668302536011
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false,
+      "vlm_critic_feedback": {
+        "epoch": 15,
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          22.91015625,
+          9.95328140258789
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.65,
+          "cyst": 0.1,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {
+          "kidney": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "tumor": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "cyst": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          }
+        },
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T20:56:20.200961",
+      "stage": "stage2",
+      "epoch": 1,
+      "epoch_time_minutes": 2.96,
+      "train_loss": 0.6818172799423337,
+      "val_loss": 0.6947104752063751,
+      "metrics": {
+        "mean_dice_fg": 0.15113942325115204,
+        "classes": {
+          "background": {
+            "dice": 0.9541901350021362,
+            "iou": 0.9123935103416443,
+            "precision": 0.9785104393959045,
+            "recall": 0.9310494661331177
+          },
+          "kidney": {
+            "dice": 0.32938632369041443,
+            "iou": 0.1971648633480072,
+            "precision": 0.26074039936065674,
+            "recall": 0.4470941424369812
+          },
+          "tumor": {
+            "dice": 0.12403194606304169,
+            "iou": 0.06611623615026474,
+            "precision": 0.07608494907617569,
+            "recall": 0.3353820741176605
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T20:59:06.348733",
+      "stage": "stage2",
+      "epoch": 2,
+      "epoch_time_minutes": 2.68,
+      "train_loss": 0.7138227839022875,
+      "val_loss": 0.6907715916633606,
+      "metrics": {
+        "mean_dice_fg": 0.16045157611370087,
+        "classes": {
+          "background": {
+            "dice": 0.956518292427063,
+            "iou": 0.9166603684425354,
+            "precision": 0.9794913530349731,
+            "recall": 0.9345982074737549
+          },
+          "kidney": {
+            "dice": 0.3610817492008209,
+            "iou": 0.22031711041927338,
+            "precision": 0.2954733967781067,
+            "recall": 0.4641421139240265
+          },
+          "tumor": {
+            "dice": 0.12027300149202347,
+            "iou": 0.06398428976535797,
+            "precision": 0.0729437991976738,
+            "recall": 0.34250664710998535
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T21:02:03.583550",
+      "stage": "stage2",
+      "epoch": 3,
+      "epoch_time_minutes": 2.81,
+      "train_loss": 0.8480947868898511,
+      "val_loss": 0.685329020023346,
+      "metrics": {
+        "mean_dice_fg": 0.15694604814052582,
+        "classes": {
+          "background": {
+            "dice": 0.9551272392272949,
+            "iou": 0.9141087532043457,
+            "precision": 0.9790274500846863,
+            "recall": 0.9323662519454956
+          },
+          "kidney": {
+            "dice": 0.33279895782470703,
+            "iou": 0.19961537420749664,
+            "precision": 0.2667810916900635,
+            "recall": 0.44223472476005554
+          },
+          "tumor": {
+            "dice": 0.13803917169570923,
+            "iou": 0.07413645088672638,
+            "precision": 0.08418326079845428,
+            "recall": 0.383171945810318
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false,
+      "vlm_critic_feedback": {
+        "epoch": 3,
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          28.6376953125,
+          11.943938255310059
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.65,
+          "cyst": 0.1,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {
+          "kidney": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "tumor": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "cyst": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          }
+        },
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T21:04:32.808340",
+      "stage": "stage2",
+      "epoch": 4,
+      "epoch_time_minutes": 2.49,
+      "train_loss": 0.7963456621393561,
+      "val_loss": 0.6982381463050842,
+      "metrics": {
+        "mean_dice_fg": 0.16579297184944153,
+        "classes": {
+          "background": {
+            "dice": 0.9552387595176697,
+            "iou": 0.9143128991127014,
+            "precision": 0.980223536491394,
+            "recall": 0.9314959049224854
+          },
+          "kidney": {
+            "dice": 0.354659765958786,
+            "iou": 0.21555405855178833,
+            "precision": 0.2798560857772827,
+            "recall": 0.48404061794281006
+          },
+          "tumor": {
+            "dice": 0.14271914958953857,
+            "iou": 0.07684306800365448,
+            "precision": 0.08719616383314133,
+            "recall": 0.3929055333137512
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T21:07:37.189376",
+      "stage": "stage2",
+      "epoch": 5,
+      "epoch_time_minutes": 2.93,
+      "train_loss": 0.8018624041229486,
+      "val_loss": 0.7006218910217286,
+      "metrics": {
+        "mean_dice_fg": 0.16587960720062256,
+        "classes": {
+          "background": {
+            "dice": 0.9550843834877014,
+            "iou": 0.9140302538871765,
+            "precision": 0.9799725413322449,
+            "recall": 0.9314292073249817
+          },
+          "kidney": {
+            "dice": 0.3580724895000458,
+            "iou": 0.2180805802345276,
+            "precision": 0.2828690707683563,
+            "recall": 0.4877438247203827
+          },
+          "tumor": {
+            "dice": 0.1395663470029831,
+            "iou": 0.07501818239688873,
+            "precision": 0.08526930958032608,
+            "recall": 0.3842381238937378
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-01T21:10:39.931658",
+      "stage": "stage2",
+      "epoch": 6,
+      "epoch_time_minutes": 2.8,
+      "train_loss": 0.778608736768365,
+      "val_loss": 0.7037497699260712,
+      "metrics": {
+        "mean_dice_fg": 0.16195690631866455,
+        "classes": {
+          "background": {
+            "dice": 0.9549462795257568,
+            "iou": 0.9137771129608154,
+            "precision": 0.9796140789985657,
+            "recall": 0.9314901828765869
+          },
+          "kidney": {
+            "dice": 0.3443278670310974,
+            "iou": 0.20796863734722137,
+            "precision": 0.2696321904659271,
+            "recall": 0.4762672185897827
+          },
+          "tumor": {
+            "dice": 0.14154285192489624,
+            "iou": 0.07616148144006729,
+            "precision": 0.08738987892866135,
+            "recall": 0.372158944606781
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false,
+      "vlm_critic_feedback": {
+        "epoch": 6,
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          35.797119140625,
+          14.33272647857666
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.65,
+          "cyst": 0.1,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {
+          "kidney": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "tumor": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "cyst": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          }
+        },
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T21:13:16.716417",
+      "stage": "stage2",
+      "epoch": 7,
+      "epoch_time_minutes": 2.61,
+      "train_loss": 0.7347901431843639,
+      "val_loss": 0.7262439072132111,
+      "metrics": {
+        "mean_dice_fg": 0.1603327840566635,
+        "classes": {
+          "background": {
+            "dice": 0.9544438123703003,
+            "iou": 0.9128574132919312,
+            "precision": 0.9791617393493652,
+            "recall": 0.930942952632904
+          },
+          "kidney": {
+            "dice": 0.34144434332847595,
+            "iou": 0.20586848258972168,
+            "precision": 0.26898154616355896,
+            "recall": 0.46734586358070374
+          },
+          "tumor": {
+            "dice": 0.1395539790391922,
+            "iou": 0.07501103729009628,
+            "precision": 0.08561253547668457,
+            "recall": 0.3772389888763428
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T21:15:55.402168",
+      "stage": "stage2",
+      "epoch": 8,
+      "epoch_time_minutes": 2.64,
+      "train_loss": 0.8762429237365723,
+      "val_loss": 0.7251761436462403,
+      "metrics": {
+        "mean_dice_fg": 0.1617990881204605,
+        "classes": {
+          "background": {
+            "dice": 0.9545978903770447,
+            "iou": 0.9131394028663635,
+            "precision": 0.9795446991920471,
+            "recall": 0.9308901429176331
+          },
+          "kidney": {
+            "dice": 0.3509637415409088,
+            "iou": 0.2128296047449112,
+            "precision": 0.2786066234111786,
+            "recall": 0.47409000992774963
+          },
+          "tumor": {
+            "dice": 0.13443352282047272,
+            "iou": 0.07206042855978012,
+            "precision": 0.08174201846122742,
+            "recall": 0.3782675266265869
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-01T21:18:47.417824",
+      "stage": "stage2",
+      "epoch": 9,
+      "epoch_time_minutes": 2.87,
+      "train_loss": 1.0290190797299146,
+      "val_loss": 0.7258687615394592,
+      "metrics": {
+        "mean_dice_fg": 0.16139428317546844,
+        "classes": {
+          "background": {
+            "dice": 0.9546359777450562,
+            "iou": 0.9132091403007507,
+            "precision": 0.9795886278152466,
+            "recall": 0.9309229850769043
+          },
+          "kidney": {
+            "dice": 0.3499521315097809,
+            "iou": 0.2120860517024994,
+            "precision": 0.2776492238044739,
+            "recall": 0.47317108511924744
+          },
+          "tumor": {
+            "dice": 0.13423070311546326,
+            "iou": 0.07194389402866364,
+            "precision": 0.08165127784013748,
+            "recall": 0.3770006597042084
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false,
+      "vlm_critic_feedback": {
+        "epoch": 9,
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          40.0,
+          17.19927215576172
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.65,
+          "cyst": 0.1,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {
+          "kidney": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "tumor": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "cyst": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          }
+        },
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-01T21:21:30.893338",
+      "stage": "stage2",
+      "epoch": 10,
+      "epoch_time_minutes": 2.72,
+      "train_loss": 0.7347748218104243,
+      "val_loss": 0.7389384925365448,
+      "metrics": {
+        "mean_dice_fg": 0.1616389900445938,
+        "classes": {
+          "background": {
+            "dice": 0.9546847939491272,
+            "iou": 0.9132986068725586,
+            "precision": 0.9796369075775146,
+            "recall": 0.9309723377227783
+          },
+          "kidney": {
+            "dice": 0.3510075509548187,
+            "iou": 0.2128618210554123,
+            "precision": 0.27868756651878357,
+            "recall": 0.4740155041217804
+          },
+          "tumor": {
+            "dice": 0.1339094340801239,
+            "iou": 0.07175935059785843,
+            "precision": 0.08141014724969864,
+            "recall": 0.3770759105682373
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-02T01:32:56.188624",
+      "stage": "stage1",
+      "epoch": 1,
+      "epoch_time_minutes": 2.71,
+      "train_loss": 0.8262981243431569,
+      "val_loss": 0.7733850479125977,
+      "metrics": {
+        "mean_dice_fg": 0.00016681959095876664,
+        "classes": {
+          "background": {
+            "dice": 0.907560408115387,
+            "iou": 0.8307647705078125,
+            "precision": 0.88751220703125,
+            "recall": 0.9285352230072021
+          },
+          "kidney": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "tumor": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "cyst": {
+            "dice": 0.0005004587583243847,
+            "iou": 0.00025029201060533524,
+            "precision": 0.00025125822867266834,
+            "recall": 0.06110937148332596
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-02T01:36:46.417038",
+      "stage": "stage1",
+      "epoch": 2,
+      "epoch_time_minutes": 3.65,
+      "train_loss": 0.8368254512548446,
+      "val_loss": 0.7621651947498321,
+      "metrics": {
+        "mean_dice_fg": 0.0,
+        "classes": {
+          "background": {
+            "dice": 0.9454541802406311,
+            "iou": 0.8965510725975037,
+            "precision": 0.8977712392807007,
+            "recall": 0.9984863996505737
+          },
+          "kidney": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "tumor": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-02T01:39:46.867990",
+      "stage": "stage1",
+      "epoch": 3,
+      "epoch_time_minutes": 3.01,
+      "train_loss": 0.810506546497345,
+      "val_loss": 0.7659616053104401,
+      "metrics": {
+        "mean_dice_fg": 0.0,
+        "classes": {
+          "background": {
+            "dice": 0.9457469582557678,
+            "iou": 0.897077739238739,
+            "precision": 0.8970828652381897,
+            "recall": 0.999993622303009
+          },
+          "kidney": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "tumor": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false,
+      "vlm_critic_feedback": {
+        "epoch": 3,
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          15.0,
+          4.800000190734863
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.65,
+          "cyst": 0.1,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {
+          "kidney": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "tumor": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "cyst": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          }
+        },
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-02T01:42:43.465780",
+      "stage": "stage1",
+      "epoch": 4,
+      "epoch_time_minutes": 2.94,
+      "train_loss": 0.8358819499611855,
+      "val_loss": 0.7058337926864624,
+      "metrics": {
+        "mean_dice_fg": 0.04965323209762573,
+        "classes": {
+          "background": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "kidney": {
+            "dice": 0.11954168230295181,
+            "iou": 0.06357050687074661,
+            "precision": 0.8493528366088867,
+            "recall": 0.0642954558134079
+          },
+          "tumor": {
+            "dice": 0.029418013989925385,
+            "iou": 0.014928591437637806,
+            "precision": 0.01492865476757288,
+            "recall": 0.9997158050537109
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-02T01:46:05.062800",
+      "stage": "stage1",
+      "epoch": 5,
+      "epoch_time_minutes": 3.21,
+      "train_loss": 0.6921145662665367,
+      "val_loss": 0.6677058815956116,
+      "metrics": {
+        "mean_dice_fg": 0.23654747009277344,
+        "classes": {
+          "background": {
+            "dice": 0.8867459297180176,
+            "iou": 0.796535074710846,
+            "precision": 0.9820021390914917,
+            "recall": 0.8083357214927673
+          },
+          "kidney": {
+            "dice": 0.5620110630989075,
+            "iou": 0.39083126187324524,
+            "precision": 0.5570504069328308,
+            "recall": 0.5670608282089233
+          },
+          "tumor": {
+            "dice": 0.14763136208057404,
+            "iou": 0.07969869673252106,
+            "precision": 0.08115895837545395,
+            "recall": 0.8158218860626221
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-02T01:49:48.376724",
+      "stage": "stage1",
+      "epoch": 6,
+      "epoch_time_minutes": 3.42,
+      "train_loss": 0.6753575671464205,
+      "val_loss": 0.6227758407592774,
+      "metrics": {
+        "mean_dice_fg": 0.2892798185348511,
+        "classes": {
+          "background": {
+            "dice": 0.9529497623443604,
+            "iou": 0.910128116607666,
+            "precision": 0.95687335729599,
+            "recall": 0.9490583539009094
+          },
+          "kidney": {
+            "dice": 0.5281721353530884,
+            "iou": 0.3588545620441437,
+            "precision": 0.654204785823822,
+            "recall": 0.4428558945655823
+          },
+          "tumor": {
+            "dice": 0.33966732025146484,
+            "iou": 0.20457787811756134,
+            "precision": 0.2328120917081833,
+            "recall": 0.6278233528137207
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true,
+      "vlm_critic_feedback": {
+        "epoch": 6,
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          17.25,
+          5.760000228881836
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.65,
+          "cyst": 0.1,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {
+          "kidney": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "tumor": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "cyst": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          }
+        },
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-02T01:53:05.292619",
+      "stage": "stage1",
+      "epoch": 7,
+      "epoch_time_minutes": 3.13,
+      "train_loss": 0.7499744325876236,
+      "val_loss": 0.5651482582092285,
+      "metrics": {
+        "mean_dice_fg": 0.3537229597568512,
+        "classes": {
+          "background": {
+            "dice": 0.9604851603507996,
+            "iou": 0.9239745736122131,
+            "precision": 0.9595146775245667,
+            "recall": 0.9614577293395996
+          },
+          "kidney": {
+            "dice": 0.5944211483001709,
+            "iou": 0.42290133237838745,
+            "precision": 0.6741236448287964,
+            "recall": 0.5315726399421692
+          },
+          "tumor": {
+            "dice": 0.4667477309703827,
+            "iou": 0.30441680550575256,
+            "precision": 0.3619060218334198,
+            "recall": 0.6571072340011597
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-02T01:55:59.322529",
+      "stage": "stage1",
+      "epoch": 8,
+      "epoch_time_minutes": 2.72,
+      "train_loss": 0.7032501935958863,
+      "val_loss": 0.6129351198673249,
+      "metrics": {
+        "mean_dice_fg": 0.31479719281196594,
+        "classes": {
+          "background": {
+            "dice": 0.9640116095542908,
+            "iou": 0.9305235147476196,
+            "precision": 0.9624793529510498,
+            "recall": 0.9655486941337585
+          },
+          "kidney": {
+            "dice": 0.5920301079750061,
+            "iou": 0.42048490047454834,
+            "precision": 0.6791005730628967,
+            "recall": 0.5247496366500854
+          },
+          "tumor": {
+            "dice": 0.3523615002632141,
+            "iou": 0.213858500123024,
+            "precision": 0.25934943556785583,
+            "recall": 0.5493939518928528
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-02T01:58:50.349498",
+      "stage": "stage1",
+      "epoch": 9,
+      "epoch_time_minutes": 2.85,
+      "train_loss": 0.7732320427894592,
+      "val_loss": 0.5509310632944107,
+      "metrics": {
+        "mean_dice_fg": 0.37692713737487793,
+        "classes": {
+          "background": {
+            "dice": 0.970496416091919,
+            "iou": 0.9426838159561157,
+            "precision": 0.9720531702041626,
+            "recall": 0.9689446091651917
+          },
+          "kidney": {
+            "dice": 0.6876610517501831,
+            "iou": 0.5239965319633484,
+            "precision": 0.713451087474823,
+            "recall": 0.663670539855957
+          },
+          "tumor": {
+            "dice": 0.44312041997909546,
+            "iou": 0.28462085127830505,
+            "precision": 0.34294116497039795,
+            "recall": 0.6259804964065552
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true,
+      "vlm_critic_feedback": {
+        "epoch": 9,
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          18.630001068115234,
+          6.91200065612793
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.65,
+          "cyst": 0.1,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {
+          "kidney": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "tumor": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "cyst": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          }
+        },
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-02T02:01:50.166898",
+      "stage": "stage1",
+      "epoch": 10,
+      "epoch_time_minutes": 2.81,
+      "train_loss": 0.6897481709718705,
+      "val_loss": 0.5603525638580322,
+      "metrics": {
+        "mean_dice_fg": 0.36435115337371826,
+        "classes": {
+          "background": {
+            "dice": 0.9688991904258728,
+            "iou": 0.9396745562553406,
+            "precision": 0.969803512096405,
+            "recall": 0.9679965376853943
+          },
+          "kidney": {
+            "dice": 0.6734196543693542,
+            "iou": 0.5076358318328857,
+            "precision": 0.7017540335655212,
+            "recall": 0.6472846269607544
+          },
+          "tumor": {
+            "dice": 0.4196338355541229,
+            "iou": 0.26552948355674744,
+            "precision": 0.32857927680015564,
+            "recall": 0.5804994702339172
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-02T02:04:46.711788",
+      "stage": "stage1",
+      "epoch": 11,
+      "epoch_time_minutes": 2.84,
+      "train_loss": 0.7421416081488132,
+      "val_loss": 0.5819085538387299,
+      "metrics": {
+        "mean_dice_fg": 0.38084864616394043,
+        "classes": {
+          "background": {
+            "dice": 0.9675201773643494,
+            "iou": 0.9370839595794678,
+            "precision": 0.9696905612945557,
+            "recall": 0.9653595685958862
+          },
+          "kidney": {
+            "dice": 0.678159236907959,
+            "iou": 0.5130415558815002,
+            "precision": 0.6994754076004028,
+            "recall": 0.658103883266449
+          },
+          "tumor": {
+            "dice": 0.46438664197921753,
+            "iou": 0.30241116881370544,
+            "precision": 0.3925677239894867,
+            "recall": 0.5683674812316895
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-02T02:07:40.602778",
+      "stage": "stage1",
+      "epoch": 12,
+      "epoch_time_minutes": 2.71,
+      "train_loss": 0.7727553008124233,
+      "val_loss": 0.4888667345046997,
+      "metrics": {
+        "mean_dice_fg": 0.41044846177101135,
+        "classes": {
+          "background": {
+            "dice": 0.9731844067573547,
+            "iou": 0.9477693438529968,
+            "precision": 0.9764878153800964,
+            "recall": 0.9699032306671143
+          },
+          "kidney": {
+            "dice": 0.7392841577529907,
+            "iou": 0.5864003300666809,
+            "precision": 0.742522120475769,
+            "recall": 0.7360743284225464
+          },
+          "tumor": {
+            "dice": 0.49206122756004333,
+            "iou": 0.3263137936592102,
+            "precision": 0.4119533598423004,
+            "recall": 0.6108453273773193
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true,
+      "vlm_critic_feedback": {
+        "epoch": 12,
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          20.0,
+          8.294401168823242
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.65,
+          "cyst": 0.1,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {
+          "kidney": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "tumor": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "cyst": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          }
+        },
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-02T02:10:37.277451",
+      "stage": "stage1",
+      "epoch": 13,
+      "epoch_time_minutes": 2.76,
+      "train_loss": 0.7818846918642521,
+      "val_loss": 0.5120850920677185,
+      "metrics": {
+        "mean_dice_fg": 0.42731785774230957,
+        "classes": {
+          "background": {
+            "dice": 0.971856951713562,
+            "iou": 0.9452546834945679,
+            "precision": 0.9734779000282288,
+            "recall": 0.9702414870262146
+          },
+          "kidney": {
+            "dice": 0.7269617319107056,
+            "iou": 0.5710446834564209,
+            "precision": 0.7416399717330933,
+            "recall": 0.7128532528877258
+          },
+          "tumor": {
+            "dice": 0.5549919009208679,
+            "iou": 0.3840753138065338,
+            "precision": 0.4831242859363556,
+            "recall": 0.6519774794578552
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": true
+    },
+    {
+      "timestamp": "2026-03-02T02:13:41.380233",
+      "stage": "stage1",
+      "epoch": 14,
+      "epoch_time_minutes": 2.87,
+      "train_loss": 0.7376481849700213,
+      "val_loss": 0.5401559233665466,
+      "metrics": {
+        "mean_dice_fg": 0.4100734293460846,
+        "classes": {
+          "background": {
+            "dice": 0.9688447117805481,
+            "iou": 0.9395720958709717,
+            "precision": 0.9673766493797302,
+            "recall": 0.9703173041343689
+          },
+          "kidney": {
+            "dice": 0.7047914266586304,
+            "iou": 0.5441528558731079,
+            "precision": 0.7460776567459106,
+            "recall": 0.667834997177124
+          },
+          "tumor": {
+            "dice": 0.5254288911819458,
+            "iou": 0.3563265800476074,
+            "precision": 0.4565599262714386,
+            "recall": 0.6187654733657837
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-02T02:16:40.510700",
+      "stage": "stage1",
+      "epoch": 15,
+      "epoch_time_minutes": 2.98,
+      "train_loss": 0.6778494354337454,
+      "val_loss": 0.5521606028079986,
+      "metrics": {
+        "mean_dice_fg": 0.41362521052360535,
+        "classes": {
+          "background": {
+            "dice": 0.9695053696632385,
+            "iou": 0.9408156275749207,
+            "precision": 0.967466413974762,
+            "recall": 0.9715530276298523
+          },
+          "kidney": {
+            "dice": 0.7013541460037231,
+            "iou": 0.5400657057762146,
+            "precision": 0.7366626262664795,
+            "recall": 0.6692755222320557
+          },
+          "tumor": {
+            "dice": 0.5395214557647705,
+            "iou": 0.36941415071487427,
+            "precision": 0.4922546148300171,
+            "recall": 0.5968296527862549
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false,
+      "vlm_critic_feedback": {
+        "epoch": 15,
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          20.0,
+          9.95328140258789
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.65,
+          "cyst": 0.1,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {
+          "kidney": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "tumor": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "cyst": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          }
+        },
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-02T02:19:38.968529",
+      "stage": "stage2",
+      "epoch": 1,
+      "epoch_time_minutes": 2.83,
+      "train_loss": 0.803516641445458,
+      "val_loss": 0.6010191023349762,
+      "metrics": {
+        "mean_dice_fg": 0.3673947751522064,
+        "classes": {
+          "background": {
+            "dice": 0.9703459739685059,
+            "iou": 0.9423999786376953,
+            "precision": 0.9702244997024536,
+            "recall": 0.9704673886299133
+          },
+          "kidney": {
+            "dice": 0.6748324036598206,
+            "iou": 0.5092430710792542,
+            "precision": 0.7099089622497559,
+            "recall": 0.6430588960647583
+          },
+          "tumor": {
+            "dice": 0.42735183238983154,
+            "iou": 0.27174025774002075,
+            "precision": 0.3463343679904938,
+            "recall": 0.5578484535217285
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-02T02:22:35.932751",
+      "stage": "stage2",
+      "epoch": 2,
+      "epoch_time_minutes": 2.9,
+      "train_loss": 0.7767572561278939,
+      "val_loss": 0.643882405757904,
+      "metrics": {
+        "mean_dice_fg": 0.37424349784851074,
+        "classes": {
+          "background": {
+            "dice": 0.9701554775238037,
+            "iou": 0.9420406222343445,
+            "precision": 0.9716446995735168,
+            "recall": 0.9686707258224487
+          },
+          "kidney": {
+            "dice": 0.7109520435333252,
+            "iou": 0.5515326857566833,
+            "precision": 0.720292329788208,
+            "recall": 0.701850950717926
+          },
+          "tumor": {
+            "dice": 0.4117784798145294,
+            "iou": 0.25927016139030457,
+            "precision": 0.3464449644088745,
+            "recall": 0.5074805021286011
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-02T02:25:23.629416",
+      "stage": "stage2",
+      "epoch": 3,
+      "epoch_time_minutes": 2.71,
+      "train_loss": 0.7015952093526721,
+      "val_loss": 0.5414342403411865,
+      "metrics": {
+        "mean_dice_fg": 0.36707165837287903,
+        "classes": {
+          "background": {
+            "dice": 0.973159909248352,
+            "iou": 0.947722852230072,
+            "precision": 0.9775078892707825,
+            "recall": 0.968850314617157
+          },
+          "kidney": {
+            "dice": 0.727868914604187,
+            "iou": 0.5721650123596191,
+            "precision": 0.7275784611701965,
+            "recall": 0.7281595468521118
+          },
+          "tumor": {
+            "dice": 0.3733460605144501,
+            "iou": 0.22951781749725342,
+            "precision": 0.2833208739757538,
+            "recall": 0.5472276210784912
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false,
+      "vlm_critic_feedback": {
+        "epoch": 3,
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          20.0,
+          11.943938255310059
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.65,
+          "cyst": 0.1,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {
+          "kidney": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "tumor": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "cyst": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          }
+        },
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-02T02:28:03.978584",
+      "stage": "stage2",
+      "epoch": 4,
+      "epoch_time_minutes": 2.67,
+      "train_loss": 0.7537346189841628,
+      "val_loss": 0.6255756914615631,
+      "metrics": {
+        "mean_dice_fg": 0.3546766936779022,
+        "classes": {
+          "background": {
+            "dice": 0.967850923538208,
+            "iou": 0.9377046823501587,
+            "precision": 0.9677780866622925,
+            "recall": 0.9679239392280579
+          },
+          "kidney": {
+            "dice": 0.6636434197425842,
+            "iou": 0.4966065585613251,
+            "precision": 0.7138183116912842,
+            "recall": 0.6200589537620544
+          },
+          "tumor": {
+            "dice": 0.40038660168647766,
+            "iou": 0.25030210614204407,
+            "precision": 0.31390199065208435,
+            "recall": 0.552649736404419
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-02T02:30:46.254273",
+      "stage": "stage2",
+      "epoch": 5,
+      "epoch_time_minutes": 2.7,
+      "train_loss": 0.7718037039041519,
+      "val_loss": 0.5140711754560471,
+      "metrics": {
+        "mean_dice_fg": 0.4157731533050537,
+        "classes": {
+          "background": {
+            "dice": 0.9721360802650452,
+            "iou": 0.9457827806472778,
+            "precision": 0.9732091426849365,
+            "recall": 0.9710652828216553
+          },
+          "kidney": {
+            "dice": 0.7459759712219238,
+            "iou": 0.5948657989501953,
+            "precision": 0.7722460031509399,
+            "recall": 0.721434473991394
+          },
+          "tumor": {
+            "dice": 0.5013434290885925,
+            "iou": 0.3345285654067993,
+            "precision": 0.42170488834381104,
+            "recall": 0.618064284324646
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-02T02:33:26.221889",
+      "stage": "stage2",
+      "epoch": 6,
+      "epoch_time_minutes": 2.51,
+      "train_loss": 0.7453141368925571,
+      "val_loss": 0.5616080433130264,
+      "metrics": {
+        "mean_dice_fg": 0.4159170687198639,
+        "classes": {
+          "background": {
+            "dice": 0.9727914929389954,
+            "iou": 0.9470242857933044,
+            "precision": 0.9734128713607788,
+            "recall": 0.9721708297729492
+          },
+          "kidney": {
+            "dice": 0.7256689667701721,
+            "iou": 0.5694509148597717,
+            "precision": 0.7409682273864746,
+            "recall": 0.7109887599945068
+          },
+          "tumor": {
+            "dice": 0.5220823287963867,
+            "iou": 0.35325536131858826,
+            "precision": 0.4711085557937622,
+            "recall": 0.5854251384735107
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false,
+      "vlm_critic_feedback": {
+        "epoch": 6,
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          20.0,
+          14.33272647857666
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.65,
+          "cyst": 0.1,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {
+          "kidney": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "tumor": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "cyst": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          }
+        },
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-02T02:36:11.523756",
+      "stage": "stage2",
+      "epoch": 7,
+      "epoch_time_minutes": 2.67,
+      "train_loss": 0.8045690178871154,
+      "val_loss": 0.6177236884832382,
+      "metrics": {
+        "mean_dice_fg": 0.39772307872772217,
+        "classes": {
+          "background": {
+            "dice": 0.972034752368927,
+            "iou": 0.9455910921096802,
+            "precision": 0.9725100994110107,
+            "recall": 0.9715598821640015
+          },
+          "kidney": {
+            "dice": 0.7165644764900208,
+            "iou": 0.5583174824714661,
+            "precision": 0.7328326106071472,
+            "recall": 0.7010028958320618
+          },
+          "tumor": {
+            "dice": 0.47660472989082336,
+            "iou": 0.31285691261291504,
+            "precision": 0.4032043516635895,
+            "recall": 0.5826767086982727
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-02T02:39:14.434059",
+      "stage": "stage2",
+      "epoch": 8,
+      "epoch_time_minutes": 3.05,
+      "train_loss": 0.7831557717174291,
+      "val_loss": 0.6054462760686874,
+      "metrics": {
+        "mean_dice_fg": 0.4017625153064728,
+        "classes": {
+          "background": {
+            "dice": 0.9747518301010132,
+            "iou": 0.9507471919059753,
+            "precision": 0.9781646728515625,
+            "recall": 0.9713626503944397
+          },
+          "kidney": {
+            "dice": 0.7321193218231201,
+            "iou": 0.5774355530738831,
+            "precision": 0.7321656346321106,
+            "recall": 0.7320730686187744
+          },
+          "tumor": {
+            "dice": 0.473168283700943,
+            "iou": 0.30990204215049744,
+            "precision": 0.38692739605903625,
+            "recall": 0.6088792085647583
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    },
+    {
+      "timestamp": "2026-03-02T02:41:56.285670",
+      "stage": "stage2",
+      "epoch": 9,
+      "epoch_time_minutes": 2.7,
+      "train_loss": 0.7121505670249462,
+      "val_loss": 0.626313453912735,
+      "metrics": {
+        "mean_dice_fg": 0.39216339588165283,
+        "classes": {
+          "background": {
+            "dice": 0.9720516204833984,
+            "iou": 0.9456230401992798,
+            "precision": 0.9714117050170898,
+            "recall": 0.9726924896240234
+          },
+          "kidney": {
+            "dice": 0.7007246017456055,
+            "iou": 0.5393195748329163,
+            "precision": 0.7238212823867798,
+            "recall": 0.6790563464164734
+          },
+          "tumor": {
+            "dice": 0.47576555609703064,
+            "iou": 0.31213411688804626,
+            "precision": 0.4071893095970154,
+            "recall": 0.5721181035041809
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false,
+      "vlm_critic_feedback": {
+        "epoch": 9,
+        "adaptive_class_weights": [
+          0.10000000149011612,
+          1.0,
+          20.0,
+          17.19927215576172
+        ],
+        "case_difficulty_scores": {},
+        "sampling_bias": {
+          "tumor": 0.65,
+          "cyst": 0.1,
+          "kidney": 0.15,
+          "random": 0.1
+        },
+        "error_counts": {
+          "kidney": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "tumor": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          },
+          "cyst": {
+            "missed": 0,
+            "over_segmented": 0,
+            "boundary": 0,
+            "class_confusion": 0,
+            "none": 0
+          }
+        },
+        "dominant_failures": [],
+        "num_analyzed": 0
+      }
+    },
+    {
+      "timestamp": "2026-03-02T02:44:52.434133",
+      "stage": "stage2",
+      "epoch": 10,
+      "epoch_time_minutes": 2.94,
+      "train_loss": 0.6602401461452245,
+      "val_loss": 0.5907638758420944,
+      "metrics": {
+        "mean_dice_fg": 0.3897888660430908,
+        "classes": {
+          "background": {
+            "dice": 0.9731830954551697,
+            "iou": 0.9477668404579163,
+            "precision": 0.9747264385223389,
+            "recall": 0.9716445207595825
+          },
+          "kidney": {
+            "dice": 0.7430455684661865,
+            "iou": 0.5911476016044617,
+            "precision": 0.758770227432251,
+            "recall": 0.7279594540596008
+          },
+          "tumor": {
+            "dice": 0.4263210594654083,
+            "iou": 0.2709072530269623,
+            "precision": 0.33753520250320435,
+            "recall": 0.5784873366355896
+          },
+          "cyst": {
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      },
+      "is_best": false
+    }
+  ]
+}

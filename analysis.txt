@@ -1,0 +1,101 @@
+
+======================================================================
+  KiTS23 DATASET ANALYSIS
+======================================================================
+Found 489 cases
+======================================================================
+Analyzing cases:   1%|█▌                                                                                                                                                   | 5/489 [00:17<20:16,  2.51Analyzing cases:   1%|█▊                                                                                                                                                   | 6/489 [00:26<37:37,  4.67Analyzing cases:   1%|██▏                                                                                                                                                  | 7/489 [00:27<29:07,  3.63Analyzing cases:   2%|██▍                                                                                                     Analyzing cases:   2%|██▋                                                                                               Analyzing cases:   2%|███                                                                                               Analyzing cases:   2%|███▎                                                                                              Analyzing cases:   2%|███▋                                                                                              
+Analyzing cases:   3%|███▉                                                                                              
+Analyzing cases:   3%|████▏                                                                                             
+Analyzing cases:   3%|████▌                                                                                             
+Analyzing cases:   3%|████▊                                                                                             
+Analyzing cases:   3%|█████▏                                                                                            
+Analyzing cases:   4%|█████▍                                                                                            
+Analyzing cases:   4%|█████▊                                                                                            Analyzing cases:   4%|██████                                                                                            Analyzing cases:   4%|██████▎                                                                                           Analyzing cases:   4%|██████▋                                                                                           Analyzing cases:   5%|██████▉                                                                                           Analyzing cases:   5%|███████▎                                                                                          Analyzing cases:   5%|███████▌                                                                                          Analyzing cases:   5%|███████▊                                                                                          Analyzing cases:   6%|████████▏                                                                                         Analyzing cases:   6%|████████▍                                                                                         Analyzing cases:   6%|█████████▍                                                                                        Analyzing cases:   7%|█████████▋                                                                                        Analyzing cases:   7%|█████████▉                                                                                        Analyzing cases:   7%|██████████▎                                                                                       Analyzing cases:   7%|██████████▌                                                                                       Analyzing cases:   7%|██████████▉                                                                                                                                       Analyzing cases:   9%|████████████▋                                                                                                                                       | 42/489 [01:05<05:32,  1.35it/s]
+Analyzing cases: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 489/489 [15:22<00:00,  1.89s/it]
+
+======================================================================
+  DATASET SUMMARY
+======================================================================
+
+Total cases: 489
+Cases with kidney: 489
+Cases with tumor: 489
+Cases with cyst: 248
+
+📊 KIDNEY (3282 instances):
+   Volume (mm³):
+      Min: 0.2
+      5th percentile: 0.5
+      Median: 3.9
+      95th percentile: 330548.6
+      Max: 2674374.8
+   Equivalent Diameter (mm):
+      Min: 0.7
+      5th percentile: 1.0
+      Median: 2.0
+      95th percentile: 85.8
+      Max: 172.2
+   Max Dimension (mm):
+      Min: 0.6
+      Median: 5.0
+      Max: 224.9
+
+📊 TUMOR (937 instances):
+   Volume (mm³):
+      Min: 0.3
+      5th percentile: 0.7
+      Median: 4053.7
+      95th percentile: 429249.3
+      Max: 2590826.6
+   Equivalent Diameter (mm):
+      Min: 0.8
+      5th percentile: 1.1
+      Median: 19.8
+      95th percentile: 93.6
+      Max: 170.4
+   Max Dimension (mm):
+      Min: 0.8
+      Median: 23.1
+      Max: 200.0
+
+📊 CYST (1074 instances):
+   Volume (mm³):
+      Min: 0.3
+      5th percentile: 1.5
+      Median: 401.2
+      95th percentile: 24756.1
+      Max: 937335.6
+   Equivalent Diameter (mm):
+      Min: 0.9
+      5th percentile: 1.4
+      Median: 9.2
+      95th percentile: 36.2
+      Max: 121.4
+   Max Dimension (mm):
+      Min: 0.8
+      Median: 11.0
+      Max: 155.0
+
+======================================================================
+  RECOMMENDATIONS
+======================================================================
+
+📐 Smallest lesion (5th percentile): 0.7 mm
+   → Need at least 2-3 voxels to capture
+
+🎯 RECOMMENDED STAGE 2 PARAMETERS:
+   spacing: (0.5, 0.5, 0.8)
+   patch_size: (160, 160, 80)
+
+🔍 RECOMMENDED STAGE 1 PARAMETERS:
+   spacing: (2.0, 2.0, 2.0)
+   patch_size: (160, 160, 80)
+
+📁 Full results saved to: kits23_dataset_analysis.json
+
+======================================================================
+  ANALYSIS COMPLETE
+======================================================================
+(dl-env-linux) wsluser@DESKTOP-J3ESTLE:/mnt/d/Salman/gastric_cancer/kidney$ 
+(dl-env-linux) wsluser@DESKTOP-J3ESTLE:/mnt/d/Salman/gastric_cancer/kidney$

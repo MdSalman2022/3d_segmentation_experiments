@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+script_dir_posix="$(CDPATH= cd -- "$(dirname "$0")" && pwd)"
+repo_root_posix="$(CDPATH= cd -- "$script_dir_posix/../.." && pwd)"
+
+if command -v cygpath >/dev/null 2>&1; then
+  repo_root="$(cygpath -w "$repo_root_posix")"
+  checker="$(cygpath -w "$repo_root_posix/kidney/check_staged_file_sizes.py")"
+else
+  repo_root="$repo_root_posix"
+  checker="$repo_root_posix/kidney/check_staged_file_sizes.py"
+fi
+
+if command -v python >/dev/null 2>&1; then
+  exec python "$checker" --limit-mb 30 --repo-root "$repo_root"
+fi
+
+if command -v py >/dev/null 2>&1; then
+  exec py -3 "$checker" --limit-mb 30 --repo-root "$repo_root"
+fi
+
+echo "pre-commit: Python is required to enforce the 30 MB file limit." >&2
+exit 1

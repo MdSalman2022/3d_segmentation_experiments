@@ -1,0 +1,371 @@
+{
+  "version": "V5_VLM_CRITIC_MGPL",
+  "best_dice": 0.42731785774230957,
+  "total_time_hours": 1.25,
+  "total_params": 266615985,
+  "mgpl_enabled": true,
+  "vlm_critic_enabled": true,
+  "config": {
+    "kits23_dir": "./kits23/dataset",
+    "output_dir": "./output/meddino_vista3d_v5_vlm_critic",
+    "dinov2_backbone": "dinov2_vitb14",
+    "hf_token": "None",
+    "num_classes": "4",
+    "feature_dim": "256",
+    "cnn_channels": "[32, 64, 128, 256]",
+    "batch_size": "1",
+    "val_split": "0.2",
+    "num_samples_per_volume": "2",
+    "patch_size": "(48, 154, 154)",
+    "lr_stage1": "0.0001",
+    "lr_stage2": "5e-06",
+    "weight_decay": "1e-05",
+    "clip_model": "ViT-B-32",
+    "clip_pretrained": "openai",
+    "vlm_backend": "ollama",
+    "vlm_model": "qwen3-vl:4b",
+    "vlm_api_url": "http://localhost:11434",
+    "critic_every_k_epochs": "3",
+    "critic_top_n_worst": "5",
+    "critic_num_slices": "3",
+    "prompt_levels": "5",
+    "use_mgpl": "True",
+    "use_vlm_critic": "True",
+    "num_epochs_stage1": "15",
+    "num_epochs_stage2": "10",
+    "quick_cases": "50",
+    "use_warmup": "False",
+    "patience_stage1": "5",
+    "patience_stage2": "5"
+  },
+  "critic_history": [
+    {
+      "epoch": 3,
+      "adaptive_class_weights": [
+        0.10000000149011612,
+        1.0,
+        15.0,
+        4.800000190734863
+      ],
+      "case_difficulty_scores": {},
+      "sampling_bias": {
+        "tumor": 0.65,
+        "cyst": 0.1,
+        "kidney": 0.15,
+        "random": 0.1
+      },
+      "error_counts": {
+        "kidney": {
+          "missed": 0,
+          "over_segmented": 0,
+          "boundary": 0,
+          "class_confusion": 0,
+          "none": 0
+        },
+        "tumor": {
+          "missed": 0,
+          "over_segmented": 0,
+          "boundary": 0,
+          "class_confusion": 0,
+          "none": 0
+        },
+        "cyst": {
+          "missed": 0,
+          "over_segmented": 0,
+          "boundary": 0,
+          "class_confusion": 0,
+          "none": 0
+        }
+      },
+      "dominant_failures": [],
+      "num_analyzed": 0
+    },
+    {
+      "epoch": 6,
+      "adaptive_class_weights": [
+        0.10000000149011612,
+        1.0,
+        17.25,
+        5.760000228881836
+      ],
+      "case_difficulty_scores": {},
+      "sampling_bias": {
+        "tumor": 0.65,
+        "cyst": 0.1,
+        "kidney": 0.15,
+        "random": 0.1
+      },
+      "error_counts": {
+        "kidney": {
+          "missed": 0,
+          "over_segmented": 0,
+          "boundary": 0,
+          "class_confusion": 0,
+          "none": 0
+        },
+        "tumor": {
+          "missed": 0,
+          "over_segmented": 0,
+          "boundary": 0,
+          "class_confusion": 0,
+          "none": 0
+        },
+        "cyst": {
+          "missed": 0,
+          "over_segmented": 0,
+          "boundary": 0,
+          "class_confusion": 0,
+          "none": 0
+        }
+      },
+      "dominant_failures": [],
+      "num_analyzed": 0
+    },
+    {
+      "epoch": 9,
+      "adaptive_class_weights": [
+        0.10000000149011612,
+        1.0,
+        18.630001068115234,
+        6.91200065612793
+      ],
+      "case_difficulty_scores": {},
+      "sampling_bias": {
+        "tumor": 0.65,
+        "cyst": 0.1,
+        "kidney": 0.15,
+        "random": 0.1
+      },
+      "error_counts": {
+        "kidney": {
+          "missed": 0,
+          "over_segmented": 0,
+          "boundary": 0,
+          "class_confusion": 0,
+          "none": 0
+        },
+        "tumor": {
+          "missed": 0,
+          "over_segmented": 0,
+          "boundary": 0,
+          "class_confusion": 0,
+          "none": 0
+        },
+        "cyst": {
+          "missed": 0,
+          "over_segmented": 0,
+          "boundary": 0,
+          "class_confusion": 0,
+          "none": 0
+        }
+      },
+      "dominant_failures": [],
+      "num_analyzed": 0
+    },
+    {
+      "epoch": 12,
+      "adaptive_class_weights": [
+        0.10000000149011612,
+        1.0,
+        20.0,
+        8.294401168823242
+      ],
+      "case_difficulty_scores": {},
+      "sampling_bias": {
+        "tumor": 0.65,
+        "cyst": 0.1,
+        "kidney": 0.15,
+        "random": 0.1
+      },
+      "error_counts": {
+        "kidney": {
+          "missed": 0,
+          "over_segmented": 0,
+          "boundary": 0,
+          "class_confusion": 0,
+          "none": 0
+        },
+        "tumor": {
+          "missed": 0,
+          "over_segmented": 0,
+          "boundary": 0,
+          "class_confusion": 0,
+          "none": 0
+        },
+        "cyst": {
+          "missed": 0,
+          "over_segmented": 0,
+          "boundary": 0,
+          "class_confusion": 0,
+          "none": 0
+        }
+      },
+      "dominant_failures": [],
+      "num_analyzed": 0
+    },
+    {
+      "epoch": 15,
+      "adaptive_class_weights": [
+        0.10000000149011612,
+        1.0,
+        20.0,
+        9.95328140258789
+      ],
+      "case_difficulty_scores": {},
+      "sampling_bias": {
+        "tumor": 0.65,
+        "cyst": 0.1,
+        "kidney": 0.15,
+        "random": 0.1
+      },
+      "error_counts": {
+        "kidney": {
+          "missed": 0,
+          "over_segmented": 0,
+          "boundary": 0,
+          "class_confusion": 0,
+          "none": 0
+        },
+        "tumor": {
+          "missed": 0,
+          "over_segmented": 0,
+          "boundary": 0,
+          "class_confusion": 0,
+          "none": 0
+        },
+        "cyst": {
+          "missed": 0,
+          "over_segmented": 0,
+          "boundary": 0,
+          "class_confusion": 0,
+          "none": 0
+        }
+      },
+      "dominant_failures": [],
+      "num_analyzed": 0
+    },
+    {
+      "epoch": 3,
+      "adaptive_class_weights": [
+        0.10000000149011612,
+        1.0,
+        20.0,
+        11.943938255310059
+      ],
+      "case_difficulty_scores": {},
+      "sampling_bias": {
+        "tumor": 0.65,
+        "cyst": 0.1,
+        "kidney": 0.15,
+        "random": 0.1
+      },
+      "error_counts": {
+        "kidney": {
+          "missed": 0,
+          "over_segmented": 0,
+          "boundary": 0,
+          "class_confusion": 0,
+          "none": 0
+        },
+        "tumor": {
+          "missed": 0,
+          "over_segmented": 0,
+          "boundary": 0,
+          "class_confusion": 0,
+          "none": 0
+        },
+        "cyst": {
+          "missed": 0,
+          "over_segmented": 0,
+          "boundary": 0,
+          "class_confusion": 0,
+          "none": 0
+        }
+      },
+      "dominant_failures": [],
+      "num_analyzed": 0
+    },
+    {
+      "epoch": 6,
+      "adaptive_class_weights": [
+        0.10000000149011612,
+        1.0,
+        20.0,
+        14.33272647857666
+      ],
+      "case_difficulty_scores": {},
+      "sampling_bias": {
+        "tumor": 0.65,
+        "cyst": 0.1,
+        "kidney": 0.15,
+        "random": 0.1
+      },
+      "error_counts": {
+        "kidney": {
+          "missed": 0,
+          "over_segmented": 0,
+          "boundary": 0,
+          "class_confusion": 0,
+          "none": 0
+        },
+        "tumor": {
+          "missed": 0,
+          "over_segmented": 0,
+          "boundary": 0,
+          "class_confusion": 0,
+          "none": 0
+        },
+        "cyst": {
+          "missed": 0,
+          "over_segmented": 0,
+          "boundary": 0,
+          "class_confusion": 0,
+          "none": 0
+        }
+      },
+      "dominant_failures": [],
+      "num_analyzed": 0
+    },
+    {
+      "epoch": 9,
+      "adaptive_class_weights": [
+        0.10000000149011612,
+        1.0,
+        20.0,
+        17.19927215576172
+      ],
+      "case_difficulty_scores": {},
+      "sampling_bias": {
+        "tumor": 0.65,
+        "cyst": 0.1,
+        "kidney": 0.15,
+        "random": 0.1
+      },
+      "error_counts": {
+        "kidney": {
+          "missed": 0,
+          "over_segmented": 0,
+          "boundary": 0,
+          "class_confusion": 0,
+          "none": 0
+        },
+        "tumor": {
+          "missed": 0,
+          "over_segmented": 0,
+          "boundary": 0,
+          "class_confusion": 0,
+          "none": 0
+        },
+        "cyst": {
+          "missed": 0,
+          "over_segmented": 0,
+          "boundary": 0,
+          "class_confusion": 0,
+          "none": 0
+        }
+      },
+      "dominant_failures": [],
+      "num_analyzed": 0
+    }
+  ]
+}
