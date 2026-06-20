@@ -1157,8 +1157,30 @@ def _fmt(v, fmt=".4f") -> str:
 
 
 def _load_resume(path: Path, device: torch.device):
-    if path.exists():
-        return torch.load(str(path), map_location=device, weights_only=False)
+    """Load a resume checkpoint, tolerating a corrupted primary file.
+
+    A run killed mid-write can leave a truncated zip ("failed finding central
+    directory"). We try the primary file, then a ``.bak`` rotated backup, and
+    finally give up gracefully so training can start fresh instead of crashing.
+    """
+    candidates = [p for p in (path, path.with_suffix(path.suffix + ".bak")) if p.exists()]
+    for cand in candidates:
+        try:
+            state = torch.load(str(cand), map_location=device, weights_only=False)
+            if cand != path:
+                logging.getLogger("v11").warning(
+                    f"Primary resume file unreadable; recovered from backup {cand.name}"
+                )
+            return state
+        except Exception as e:
+            logging.getLogger("v11").warning(
+                f"Resume checkpoint {cand.name} is corrupted ({type(e).__name__}: {e}); "
+                "trying next candidate."
+            )
+    if candidates:
+        logging.getLogger("v11").warning(
+            "No readable resume checkpoint found; starting from scratch."
+        )
     return None
 
 
@@ -1285,7 +1307,13 @@ def train(config: dict, resume_path=None, skip_resume=False):
             "es_counter": es.counter,
             "config": {k: str(v) for k, v in config.items()},
         }, resume_tmp)
-        os.replace(resume_tmp, output_dir / "resume_state.pth")
+        resume_final = output_dir / "resume_state.pth"
+        if resume_final.exists():
+            try:
+                os.replace(resume_final, output_dir / "resume_state.pth.bak")
+            except OSError:
+                pass
+        os.replace(resume_tmp, resume_final)
 
         if es.early_stop:
             logger.info(f"Early stopping at epoch {epoch}")

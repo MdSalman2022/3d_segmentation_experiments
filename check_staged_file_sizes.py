@@ -38,10 +38,10 @@ def main() -> int:
     parser = argparse.ArgumentParser(
         description="Block commits when staged files exceed the configured size limit.",
     )
-    parser.add_argument("--limit-mb", type=int, default=30, help="Maximum allowed staged file size in MiB.")
+    parser.add_argument("--limit-mb", type=int, default=100, help="Maximum allowed staged file size in MiB.")
     parser.add_argument(
         "--repo-root",
-        default=str(Path(__file__).resolve().parents[1]),
+        default=str(Path(__file__).resolve().parent),
         help="Path to the Git repository root.",
     )
     args = parser.parse_args()

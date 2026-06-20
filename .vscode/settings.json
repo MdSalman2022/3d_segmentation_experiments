@@ -1,1 +1,7 @@
-{}
+{
+  "git.repositoryScanIgnoredFolders": [
+    "dinov3",
+    "MedDINOv3_Repo"
+  ],
+  "git.autoRepositoryDetection": false
+}

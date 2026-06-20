@@ -9,7 +9,13 @@
 !*.ipynb
 !*.pdf
 !*.json
-!*.txt
+!*.txt 
+
+# Track efficient research notes, but not downloaded model repos.
+!efficient/
+!efficient/**
+efficient/models/
+efficient/models/**
 
 # Never track dataset directories.
 nnUNet_raw/

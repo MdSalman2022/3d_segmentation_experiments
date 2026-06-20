@@ -84,7 +84,7 @@ def get_config(mode: str) -> dict:
         "rescue_tau": (0.0, 0.0, 0.25, 0.30),
         "class_keep_min_voxels": (0, 1000, 20, 10),
         # DINOv3 model options
-        "dinov3_source": "hf",  # primary path, same loading style as dermavit_v16
+        "dinov3_source": "hf",
         "dinov3_repo": "./dinov3",
         "dinov3_model": "dinov3_vitb16",
         "dinov3_hf_model": "facebook/dinov3-vitl16-pretrain-lvd1689m",
@@ -190,9 +190,20 @@ class DINOv3SliceEncoder(nn.Module):
                 self.vit = factory(pretrained=True, weights=weights)
                 self.pretrained = True
             else:
-                print(f"  WARNING: no local DINOv3 weights found for {model_name}; using random init.")
-                self.vit = factory(pretrained=False)
-                self.pretrained = False
+                print(
+                    f"  DINOv3 local: no cached weights found for {model_name}; "
+                    "downloading public pretrained weights from Meta."
+                )
+                try:
+                    self.vit = factory(pretrained=True)
+                    self.pretrained = True
+                except Exception as exc:
+                    print(
+                        "  WARNING: public DINOv3 weight download failed; "
+                        f"falling back to random init. Reason: {exc}"
+                    )
+                    self.vit = factory(pretrained=False)
+                    self.pretrained = False
             self.embed_dim = int(getattr(self.vit, "embed_dim", getattr(self.vit, "num_features", 768)))
             self.patch_size = int(getattr(self.vit, "patch_size", self.patch_size))
 
@@ -316,7 +327,7 @@ class DINOv3VISTA3D(nn.Module):
             layers=tuple(config["dinov3_layers"]),
             hf_model=config.get("dinov3_hf_model", "facebook/dinov3-vitl16-pretrain-lvd1689m"),
             hf_layers=tuple(config.get("dinov3_hf_layers", (-9, -5, -1))),
-            source=config.get("dinov3_source", "local"),
+            source=config.get("dinov3_source", "hf"),
             patch_size=int(config.get("dinov3_patch_size", 16)),
             freeze=bool(config.get("dinov3_freeze", True)),
             slice_batch=int(config.get("dinov3_slice_batch", 8)),
@@ -384,6 +395,7 @@ def main():
     parser.add_argument("--kits23-dir", default=None)
     parser.add_argument("--output-dir", default=None)
     parser.add_argument("--local-dinov3", action="store_true", help="Use local facebookresearch/dinov3 repo instead of HuggingFace AutoModel")
+    parser.add_argument("--hf-dinov3", action="store_true", help="Use HuggingFace DINOv3 checkpoints instead of the local repo path")
     parser.add_argument("--hf-model", default=None, help="HuggingFace DINOv3 model id")
     parser.add_argument("--dinov3-repo", default=None)
     parser.add_argument("--dinov3-model", default=None, choices=["dinov3_vits16", "dinov3_vitb16", "dinov3_vitl16"])
@@ -422,6 +434,8 @@ def main():
     cfg = get_config(mode if mode not in ("evaluate", "build_cache", "audit") else "full")
     if args.local_dinov3:
         cfg["dinov3_source"] = "local"
+    if args.hf_dinov3 or args.hf_model:
+        cfg["dinov3_source"] = "hf"
     if args.hf_model:
         cfg["dinov3_hf_model"] = args.hf_model
     if args.kits23_dir:
