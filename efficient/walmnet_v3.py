@@ -92,6 +92,14 @@ def get_config(mode: str = "full") -> dict:
         "ct_znorm_stats": (101.0, 76.9),  # (mean, std) fallback for znorm
         # ---- extra augmentation (only affects fresh training) ----
         "extra_aug": True,
+        # ---- training speed (all quality- and VRAM-neutral) ----
+        "cache_mode": "persistent",   # persistent(disk) | ram | none
+        "cache_dir": "./output/walmnet_cache",
+        "persistent_workers": True,
+        "prefetch_factor": 4,
+        "channels_last": True,        # channels_last_3d: faster convs, same VRAM
+        "tf32": True,                 # TF32 matmul/conv on Ampere+, quality-neutral
+        "use_compile": False,         # opt-in torch.compile (fuses conv/norm/act)
     })
     if mode == "full":
         cfg.update({
@@ -192,10 +200,28 @@ def get_dataloaders(cfg):
         EnsureTyped(keys=["image", "label"]),
     ])
 
-    train_ds = CacheDataset(train_files, train_tf, cache_rate=cfg["cache_rate"],
-                            num_workers=cfg["num_workers"])
-    train_loader = DataLoader(train_ds, batch_size=cfg["batch_size"], shuffle=True,
-                              num_workers=cfg["num_workers"], pin_memory=True, drop_last=True)
+    # CacheDataset/PersistentDataset both cache the DETERMINISTIC prefix (Load,
+    # Orient, Spacing, Scale, CropForeground) and rerun only the Rand* transforms,
+    # so the expensive 1.5mm resampling happens once, not every epoch.
+    mode = cfg.get("cache_mode", "persistent")
+    if mode == "persistent":
+        from monai.data import PersistentDataset
+        cdir = Path(cfg["cache_dir"]); cdir.mkdir(parents=True, exist_ok=True)
+        train_ds = PersistentDataset(train_files, train_tf, cache_dir=str(cdir))
+    elif mode == "ram":
+        train_ds = CacheDataset(train_files, train_tf, cache_rate=1.0,
+                                num_workers=cfg["num_workers"])
+    else:
+        from monai.data import Dataset as _DS
+        train_ds = _DS(train_files, train_tf)
+
+    nw = cfg["num_workers"]
+    loader_kw = dict(batch_size=cfg["batch_size"], shuffle=True, num_workers=nw,
+                     pin_memory=True, drop_last=True)
+    if nw > 0:
+        loader_kw["persistent_workers"] = bool(cfg.get("persistent_workers", True))
+        loader_kw["prefetch_factor"] = int(cfg.get("prefetch_factor", 4))
+    train_loader = DataLoader(train_ds, **loader_kw)
     return train_loader, val_files, val_tf
 
 
@@ -471,6 +497,9 @@ def train(cfg, resume: bool = False):
     torch.manual_seed(cfg["seed"]); np.random.seed(cfg["seed"])
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(cfg["seed"]); torch.backends.cudnn.benchmark = True
+        if cfg.get("tf32", True):   # tensor-core matmul/conv; ~quality-neutral
+            torch.backends.cuda.matmul.allow_tf32 = True
+            torch.backends.cudnn.allow_tf32 = True
 
     out_dir = Path(cfg["output_dir"]); out_dir.mkdir(parents=True, exist_ok=True)
     logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(message)s",
@@ -482,6 +511,15 @@ def train(cfg, resume: bool = False):
     train_loader, val_files, _ = get_dataloaders(cfg)
     model = W.build_model(cfg).to(device)
     total, _ = W.count_parameters(model)
+    chlast = bool(cfg.get("channels_last", True)) and device.type == "cuda"
+    if chlast:                              # faster convs, identical VRAM footprint
+        model = model.to(memory_format=torch.channels_last_3d)
+    if cfg.get("use_compile", False):
+        try:
+            model = torch.compile(model)
+            logger.info("torch.compile enabled")
+        except Exception as exc:  # noqa: BLE001
+            logger.info(f"torch.compile unavailable ({exc}); continuing eager")
     loss_fn = W.build_loss(cfg, device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=cfg["lr"], weight_decay=cfg["weight_decay"])
     scheduler = W.cosine_warmup_scheduler(optimizer, cfg["num_epochs"], cfg["warmup_epochs"])
@@ -506,6 +544,8 @@ def train(cfg, resume: bool = False):
             batch = next(data_iter)
             img = batch["image"].to(device, non_blocking=True)
             lbl = batch["label"].to(device, non_blocking=True)
+            if chlast:
+                img = img.contiguous(memory_format=torch.channels_last_3d)
             with torch.amp.autocast("cuda", enabled=cfg["amp"] and device.type == "cuda"):
                 loss = loss_fn(model(img), lbl) / accum
             scaler.scale(loss).backward(); running += loss.item() * accum
@@ -650,6 +690,12 @@ def main():
     p.add_argument("--no-tta", action="store_true")
     p.add_argument("--no-postproc", action="store_true")
     p.add_argument("--resume", action="store_true")
+    # training-speed knobs (all quality- and VRAM-neutral)
+    p.add_argument("--cache-mode", choices=["persistent", "ram", "none"], default=None,
+                   help="persistent=disk cache of preprocessing (default), ram, or none")
+    p.add_argument("--num-workers", type=int, default=None)
+    p.add_argument("--use-compile", action="store_true", help="enable torch.compile")
+    p.add_argument("--no-channels-last", action="store_true")
     args = p.parse_args()
 
     if args.selftest:
@@ -667,6 +713,14 @@ def main():
         cfg["use_tta"] = False
     if args.no_postproc:
         cfg["postprocess"] = False
+    if args.cache_mode:
+        cfg["cache_mode"] = args.cache_mode
+    if args.num_workers is not None:
+        cfg["num_workers"] = args.num_workers
+    if args.use_compile:
+        cfg["use_compile"] = True
+    if args.no_channels_last:
+        cfg["channels_last"] = False
 
     if args.evaluate:
         evaluate(cfg, args.checkpoint)
