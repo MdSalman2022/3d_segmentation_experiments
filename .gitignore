@@ -42,3 +42,4 @@ kits23/dataset/
 *.nii.gz
 *.mha
 *.mhd
+*.zip

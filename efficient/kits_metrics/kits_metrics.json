@@ -1,0 +1,895 @@
+{
+  "checkpoint": "output/walmnet_medium/best.pth",
+  "n_cases": 97,
+  "avg_dice": 0.8181319410956808,
+  "hec": {
+    "Kidney+Masses": {
+      "dice": 0.9409991014302793,
+      "nsd": 0.8610560328690047
+    },
+    "Masses": {
+      "dice": 0.7633569404303208,
+      "nsd": 0.5928866453084749
+    },
+    "Tumor": {
+      "dice": 0.7500397814264425,
+      "nsd": 0.5681984022874194
+    }
+  },
+  "per_case": [
+    {
+      "case": "case_00000",
+      "Kidney+Masses_dice": 0.9481236920437264,
+      "Kidney+Masses_nsd": 0.8995802998542786,
+      "Masses_dice": 0.7998350855493712,
+      "Masses_nsd": 0.6706746816635132,
+      "Tumor_dice": 0.8056478405315615,
+      "Tumor_nsd": 0.6839237213134766
+    },
+    {
+      "case": "case_00001",
+      "Kidney+Masses_dice": 0.9271768949046804,
+      "Kidney+Masses_nsd": 0.8620833158493042,
+      "Masses_dice": 0.4436548223350254,
+      "Masses_nsd": 0.4468750059604645,
+      "Tumor_dice": 0.4337851929092805,
+      "Tumor_nsd": 0.45841994881629944
+    },
+    {
+      "case": "case_00002",
+      "Kidney+Masses_dice": 0.9543522229025265,
+      "Kidney+Masses_nsd": 0.8897286653518677,
+      "Masses_dice": 0.9122598953810966,
+      "Masses_nsd": 0.829980194568634,
+      "Tumor_dice": 0.8961535333821257,
+      "Tumor_nsd": 0.7282964587211609
+    },
+    {
+      "case": "case_00003",
+      "Kidney+Masses_dice": 0.9519727709110372,
+      "Kidney+Masses_nsd": 0.9028582572937012,
+      "Masses_dice": 0.8515579071134627,
+      "Masses_nsd": 0.7900262475013733,
+      "Tumor_dice": 0.8525603296056504,
+      "Tumor_nsd": 0.7933579087257385
+    },
+    {
+      "case": "case_00004",
+      "Kidney+Masses_dice": 0.9428673761405425,
+      "Kidney+Masses_nsd": 0.8386417031288147,
+      "Masses_dice": 0.8332102715563213,
+      "Masses_nsd": 0.661034107208252,
+      "Tumor_dice": 0.8332102715563213,
+      "Tumor_nsd": 0.661034107208252
+    },
+    {
+      "case": "case_00005",
+      "Kidney+Masses_dice": 0.8021499066644555,
+      "Kidney+Masses_nsd": 0.6426588296890259,
+      "Masses_dice": 0.5904052293557013,
+      "Masses_nsd": 0.3086256682872772,
+      "Tumor_dice": 0.5904052293557013,
+      "Tumor_nsd": 0.3086256682872772
+    },
+    {
+      "case": "case_00006",
+      "Kidney+Masses_dice": 0.9553373871142216,
+      "Kidney+Masses_nsd": 0.9324091672897339,
+      "Masses_dice": 0.714654199580848,
+      "Masses_nsd": 0.5248056054115295,
+      "Tumor_dice": 0.7177002583979328,
+      "Tumor_nsd": 0.5090551376342773
+    },
+    {
+      "case": "case_00007",
+      "Kidney+Masses_dice": 0.9518503108824873,
+      "Kidney+Masses_nsd": 0.8783064484596252,
+      "Masses_dice": 0.6278753541076487,
+      "Masses_nsd": 0.5403205156326294,
+      "Tumor_dice": 0.6486011939599672,
+      "Tumor_nsd": 0.5477049946784973
+    },
+    {
+      "case": "case_00008",
+      "Kidney+Masses_dice": 0.9596401181473542,
+      "Kidney+Masses_nsd": 0.8471720218658447,
+      "Masses_dice": 0.8741520612260786,
+      "Masses_nsd": 0.5525779128074646,
+      "Tumor_dice": 0.9154549675155444,
+      "Tumor_nsd": 0.5740951895713806
+    },
+    {
+      "case": "case_00009",
+      "Kidney+Masses_dice": 0.941671089902934,
+      "Kidney+Masses_nsd": 0.8573911190032959,
+      "Masses_dice": 0.7962016070124178,
+      "Masses_nsd": 0.6292017102241516,
+      "Tumor_dice": 0.7963179427235535,
+      "Tumor_nsd": 0.6292017102241516
+    },
+    {
+      "case": "case_00010",
+      "Kidney+Masses_dice": 0.944229129349979,
+      "Kidney+Masses_nsd": 0.9102134704589844,
+      "Masses_dice": 0.823575433563698,
+      "Masses_nsd": 0.6851588487625122,
+      "Tumor_dice": 0.823575433563698,
+      "Tumor_nsd": 0.6851588487625122
+    },
+    {
+      "case": "case_00011",
+      "Kidney+Masses_dice": 0.9545408422120751,
+      "Kidney+Masses_nsd": 0.920722484588623,
+      "Masses_dice": 0.9026902635472029,
+      "Masses_nsd": 0.7488698363304138,
+      "Tumor_dice": 0.9026902635472029,
+      "Tumor_nsd": 0.7488698363304138
+    },
+    {
+      "case": "case_00012",
+      "Kidney+Masses_dice": 0.9338293289431795,
+      "Kidney+Masses_nsd": 0.7699299454689026,
+      "Masses_dice": 0.8593001060445387,
+      "Masses_nsd": 0.4541032314300537,
+      "Tumor_dice": 0.8598159174417618,
+      "Tumor_nsd": 0.4558550715446472
+    },
+    {
+      "case": "case_00013",
+      "Kidney+Masses_dice": 0.9503532330259397,
+      "Kidney+Masses_nsd": 0.9073096513748169,
+      "Masses_dice": 0.8902893594128272,
+      "Masses_nsd": 0.7317529916763306,
+      "Tumor_dice": 0.8902893594128272,
+      "Tumor_nsd": 0.7317529916763306
+    },
+    {
+      "case": "case_00014",
+      "Kidney+Masses_dice": 0.9437001635014464,
+      "Kidney+Masses_nsd": 0.9020715355873108,
+      "Masses_dice": 0.28250963897651593,
+      "Masses_nsd": 0.22962313890457153,
+      "Tumor_dice": 0.28250963897651593,
+      "Tumor_nsd": 0.22962313890457153
+    },
+    {
+      "case": "case_00015",
+      "Kidney+Masses_dice": 0.9354051309562585,
+      "Kidney+Masses_nsd": 0.8684548735618591,
+      "Masses_dice": 0.5702692733308742,
+      "Masses_nsd": 0.412871778011322,
+      "Tumor_dice": 0.7706466456769193,
+      "Tumor_nsd": 0.5378895998001099
+    },
+    {
+      "case": "case_00016",
+      "Kidney+Masses_dice": 0.9564913155555913,
+      "Kidney+Masses_nsd": 0.9147740602493286,
+      "Masses_dice": 0.8851200982273041,
+      "Masses_nsd": 0.7262106537818909,
+      "Tumor_dice": 0.8851200982273041,
+      "Tumor_nsd": 0.7262106537818909
+    },
+    {
+      "case": "case_00017",
+      "Kidney+Masses_dice": 0.9454576382391894,
+      "Kidney+Masses_nsd": 0.8823267221450806,
+      "Masses_dice": 0.37632821723730814,
+      "Masses_nsd": 0.3212479054927826,
+      "Tumor_dice": 0.7048092868988391,
+      "Tumor_nsd": 0.5644444227218628
+    },
+    {
+      "case": "case_00018",
+      "Kidney+Masses_dice": 0.9385734896113059,
+      "Kidney+Masses_nsd": 0.905650794506073,
+      "Masses_dice": 0.8355101639988216,
+      "Masses_nsd": 0.7151727080345154,
+      "Tumor_dice": 0.8355101639988216,
+      "Tumor_nsd": 0.7151727080345154
+    },
+    {
+      "case": "case_00019",
+      "Kidney+Masses_dice": 0.9518871267971686,
+      "Kidney+Masses_nsd": 0.9219602942466736,
+      "Masses_dice": 0.6993114001530222,
+      "Masses_nsd": 0.7333333492279053,
+      "Tumor_dice": 0.6993114001530222,
+      "Tumor_nsd": 0.7333333492279053
+    },
+    {
+      "case": "case_00020",
+      "Kidney+Masses_dice": 0.9462161536681324,
+      "Kidney+Masses_nsd": 0.8787571787834167,
+      "Masses_dice": 0.19331243469174503,
+      "Masses_nsd": 0.20304016768932343,
+      "Tumor_dice": 0.20229633679606343,
+      "Tumor_nsd": 0.22104018926620483
+    },
+    {
+      "case": "case_00021",
+      "Kidney+Masses_dice": 0.92904478677732,
+      "Kidney+Masses_nsd": 0.8295415639877319,
+      "Masses_dice": 0.8679907473877323,
+      "Masses_nsd": 0.8022280335426331,
+      "Tumor_dice": 0.7867154811715481,
+      "Tumor_nsd": 0.6431623697280884
+    },
+    {
+      "case": "case_00022",
+      "Kidney+Masses_dice": 0.9315288770326856,
+      "Kidney+Masses_nsd": 0.8718726634979248,
+      "Masses_dice": 0.8436548223350254,
+      "Masses_nsd": 0.778283953666687,
+      "Tumor_dice": 0.8470948012232415,
+      "Tumor_nsd": 0.7878555059432983
+    },
+    {
+      "case": "case_00023",
+      "Kidney+Masses_dice": 0.9606544145039115,
+      "Kidney+Masses_nsd": 0.9456719160079956,
+      "Masses_dice": 0.0,
+      "Masses_nsd": 0.0,
+      "Tumor_dice": 0.0,
+      "Tumor_nsd": 0.0
+    },
+    {
+      "case": "case_00024",
+      "Kidney+Masses_dice": 0.9654137023135959,
+      "Kidney+Masses_nsd": 0.9483787417411804,
+      "Masses_dice": 0.9449063326674945,
+      "Masses_nsd": 0.8456019759178162,
+      "Tumor_dice": 0.9449063326674945,
+      "Tumor_nsd": 0.8456019759178162
+    },
+    {
+      "case": "case_00025",
+      "Kidney+Masses_dice": 0.9742043125804755,
+      "Kidney+Masses_nsd": 0.94394850730896,
+      "Masses_dice": 0.9557540596126102,
+      "Masses_nsd": 0.7654847502708435,
+      "Tumor_dice": 0.9557540596126102,
+      "Tumor_nsd": 0.7654847502708435
+    },
+    {
+      "case": "case_00026",
+      "Kidney+Masses_dice": 0.9597130980284518,
+      "Kidney+Masses_nsd": 0.8768042325973511,
+      "Masses_dice": 0.9133202661292549,
+      "Masses_nsd": 0.7044246196746826,
+      "Tumor_dice": 0.8901780242021694,
+      "Tumor_nsd": 0.6246984004974365
+    },
+    {
+      "case": "case_00027",
+      "Kidney+Masses_dice": 0.9629433126247979,
+      "Kidney+Masses_nsd": 0.9496996998786926,
+      "Masses_dice": 0.7991967871485943,
+      "Masses_nsd": 0.7966902852058411,
+      "Tumor_dice": 0.7666971637694419,
+      "Tumor_nsd": 0.7098624110221863
+    },
+    {
+      "case": "case_00028",
+      "Kidney+Masses_dice": 0.9509506310912287,
+      "Kidney+Masses_nsd": 0.8840173482894897,
+      "Masses_dice": 0.9249830993095652,
+      "Masses_nsd": 0.7420674562454224,
+      "Tumor_dice": 0.9084753849736724,
+      "Tumor_nsd": 0.6988275647163391
+    },
+    {
+      "case": "case_00029",
+      "Kidney+Masses_dice": 0.9465678407523158,
+      "Kidney+Masses_nsd": 0.8621053099632263,
+      "Masses_dice": 0.9182311655084189,
+      "Masses_nsd": 0.735939085483551,
+      "Tumor_dice": 0.9197894299369676,
+      "Tumor_nsd": 0.7429456114768982
+    },
+    {
+      "case": "case_00030",
+      "Kidney+Masses_dice": 0.972191209122224,
+      "Kidney+Masses_nsd": 0.86883544921875,
+      "Masses_dice": 0.924988641472682,
+      "Masses_nsd": 0.5890030264854431,
+      "Tumor_dice": 0.9249236773510462,
+      "Tumor_nsd": 0.5873374938964844
+    },
+    {
+      "case": "case_00031",
+      "Kidney+Masses_dice": 0.9397524277290916,
+      "Kidney+Masses_nsd": 0.833771288394928,
+      "Masses_dice": 0.7819051121735933,
+      "Masses_nsd": 0.7602799534797668,
+      "Tumor_dice": 0.0,
+      "Tumor_nsd": 0.0
+    },
+    {
+      "case": "case_00032",
+      "Kidney+Masses_dice": 0.9522791531618509,
+      "Kidney+Masses_nsd": 0.9163295030593872,
+      "Masses_dice": 0.8462877030162413,
+      "Masses_nsd": 0.7696969509124756,
+      "Tumor_dice": 0.8521082441787288,
+      "Tumor_nsd": 0.7439693212509155
+    },
+    {
+      "case": "case_00033",
+      "Kidney+Masses_dice": 0.9516777356905405,
+      "Kidney+Masses_nsd": 0.9354814887046814,
+      "Masses_dice": 0.6522491349480969,
+      "Masses_nsd": 0.5565939545631409,
+      "Tumor_dice": 0.5896739130434783,
+      "Tumor_nsd": 0.5377455949783325
+    },
+    {
+      "case": "case_00034",
+      "Kidney+Masses_dice": 0.9565440932315042,
+      "Kidney+Masses_nsd": 0.9038905501365662,
+      "Masses_dice": 0.859716138076047,
+      "Masses_nsd": 0.6724050641059875,
+      "Tumor_dice": 0.8796354610454562,
+      "Tumor_nsd": 0.6931905150413513
+    },
+    {
+      "case": "case_00035",
+      "Kidney+Masses_dice": 0.9442609782220636,
+      "Kidney+Masses_nsd": 0.8642878532409668,
+      "Masses_dice": 0.8809897879025923,
+      "Masses_nsd": 0.7606208920478821,
+      "Tumor_dice": 0.8932103272051504,
+      "Tumor_nsd": 0.7878702282905579
+    },
+    {
+      "case": "case_00036",
+      "Kidney+Masses_dice": 0.9655384394707048,
+      "Kidney+Masses_nsd": 0.9393280148506165,
+      "Masses_dice": 0.6921646239687157,
+      "Masses_nsd": 0.3842794895172119,
+      "Tumor_dice": 0.6921646239687157,
+      "Tumor_nsd": 0.3842794895172119
+    },
+    {
+      "case": "case_00037",
+      "Kidney+Masses_dice": 0.9110129072517636,
+      "Kidney+Masses_nsd": 0.7084006071090698,
+      "Masses_dice": 0.8552626898587842,
+      "Masses_nsd": 0.5703493356704712,
+      "Tumor_dice": 0.8105278308967162,
+      "Tumor_nsd": 0.44402962923049927
+    },
+    {
+      "case": "case_00038",
+      "Kidney+Masses_dice": 0.9629833454840476,
+      "Kidney+Masses_nsd": 0.9215704798698425,
+      "Masses_dice": 0.9146646646646647,
+      "Masses_nsd": 0.7407212853431702,
+      "Tumor_dice": 0.9104118250528652,
+      "Tumor_nsd": 0.7264679074287415
+    },
+    {
+      "case": "case_00039",
+      "Kidney+Masses_dice": 0.9435646978777343,
+      "Kidney+Masses_nsd": 0.8733412623405457,
+      "Masses_dice": 0.8469461077844311,
+      "Masses_nsd": 0.8336798548698425,
+      "Tumor_dice": 0.8481650275845527,
+      "Tumor_nsd": 0.8371607661247253
+    },
+    {
+      "case": "case_00040",
+      "Kidney+Masses_dice": 0.9481449049132893,
+      "Kidney+Masses_nsd": 0.8975302577018738,
+      "Masses_dice": 0.36136567834681044,
+      "Masses_nsd": 0.261974573135376,
+      "Tumor_dice": 0.36136567834681044,
+      "Tumor_nsd": 0.261974573135376
+    },
+    {
+      "case": "case_00041",
+      "Kidney+Masses_dice": 0.9460876511045785,
+      "Kidney+Masses_nsd": 0.8582927584648132,
+      "Masses_dice": 0.6901268730747141,
+      "Masses_nsd": 0.4588489532470703,
+      "Tumor_dice": 0.6928399203270783,
+      "Tumor_nsd": 0.46395233273506165
+    },
+    {
+      "case": "case_00042",
+      "Kidney+Masses_dice": 0.7195498744731823,
+      "Kidney+Masses_nsd": 0.4875035285949707,
+      "Masses_dice": 0.6469568418267658,
+      "Masses_nsd": 0.2957680821418762,
+      "Tumor_dice": 0.6492349358144384,
+      "Tumor_nsd": 0.2986624538898468
+    },
+    {
+      "case": "case_00043",
+      "Kidney+Masses_dice": 0.9626705762941243,
+      "Kidney+Masses_nsd": 0.9451574087142944,
+      "Masses_dice": 0.6624949535728704,
+      "Masses_nsd": 0.47815072536468506,
+      "Tumor_dice": 0.6624949535728704,
+      "Tumor_nsd": 0.47815072536468506
+    },
+    {
+      "case": "case_00044",
+      "Kidney+Masses_dice": 0.9595789221843412,
+      "Kidney+Masses_nsd": 0.9180502891540527,
+      "Masses_dice": 0.9034377866273468,
+      "Masses_nsd": 0.7375943660736084,
+      "Tumor_dice": 0.9144224430500281,
+      "Tumor_nsd": 0.7438016533851624
+    },
+    {
+      "case": "case_00045",
+      "Kidney+Masses_dice": 0.8801167293338571,
+      "Kidney+Masses_nsd": 0.690285861492157,
+      "Masses_dice": 0.8291553183999407,
+      "Masses_nsd": 0.5751299858093262,
+      "Tumor_dice": 0.7097642809821982,
+      "Tumor_nsd": 0.4606374502182007
+    },
+    {
+      "case": "case_00046",
+      "Kidney+Masses_dice": 0.9097874493253363,
+      "Kidney+Masses_nsd": 0.8439299464225769,
+      "Masses_dice": 0.7050217570269317,
+      "Masses_nsd": 0.5796313881874084,
+      "Tumor_dice": 0.9202103127017803,
+      "Tumor_nsd": 0.8166666626930237
+    },
+    {
+      "case": "case_00047",
+      "Kidney+Masses_dice": 0.9522527703091246,
+      "Kidney+Masses_nsd": 0.8904334306716919,
+      "Masses_dice": 0.9084429382178111,
+      "Masses_nsd": 0.7183002233505249,
+      "Tumor_dice": 0.9084429382178111,
+      "Tumor_nsd": 0.7183002233505249
+    },
+    {
+      "case": "case_00048",
+      "Kidney+Masses_dice": 0.9024206728545437,
+      "Kidney+Masses_nsd": 0.7942267656326294,
+      "Masses_dice": 0.6011165234524657,
+      "Masses_nsd": 0.4405018389225006,
+      "Tumor_dice": 0.6011165234524657,
+      "Tumor_nsd": 0.4405018389225006
+    },
+    {
+      "case": "case_00049",
+      "Kidney+Masses_dice": 0.9449981599607459,
+      "Kidney+Masses_nsd": 0.9074611663818359,
+      "Masses_dice": 0.44069192751235586,
+      "Masses_nsd": 0.2529858946800232,
+      "Tumor_dice": 0.4423315419594874,
+      "Tumor_nsd": 0.2554824650287628
+    },
+    {
+      "case": "case_00050",
+      "Kidney+Masses_dice": 0.9672012142810005,
+      "Kidney+Masses_nsd": 0.9696773290634155,
+      "Masses_dice": 0.6686783343391671,
+      "Masses_nsd": 0.7439916133880615,
+      "Tumor_dice": 0.6374695863746959,
+      "Tumor_nsd": 0.6666666865348816
+    },
+    {
+      "case": "case_00051",
+      "Kidney+Masses_dice": 0.9532042076111285,
+      "Kidney+Masses_nsd": 0.8991936445236206,
+      "Masses_dice": 0.83343175107881,
+      "Masses_nsd": 0.668181836605072,
+      "Tumor_dice": 0.8180834709332119,
+      "Tumor_nsd": 0.5667690634727478
+    },
+    {
+      "case": "case_00052",
+      "Kidney+Masses_dice": 0.9508528748780406,
+      "Kidney+Masses_nsd": 0.9159805178642273,
+      "Masses_dice": 0.8211028192371476,
+      "Masses_nsd": 0.6385993957519531,
+      "Tumor_dice": 0.8208583868961228,
+      "Tumor_nsd": 0.638024091720581
+    },
+    {
+      "case": "case_00053",
+      "Kidney+Masses_dice": 0.9520859189477079,
+      "Kidney+Masses_nsd": 0.9374352693557739,
+      "Masses_dice": 0.8996652787982693,
+      "Masses_nsd": 0.7838992476463318,
+      "Tumor_dice": 0.8997876510944136,
+      "Tumor_nsd": 0.7850867509841919
+    },
+    {
+      "case": "case_00054",
+      "Kidney+Masses_dice": 0.9455701460847892,
+      "Kidney+Masses_nsd": 0.8654796481132507,
+      "Masses_dice": 0.7599012809965918,
+      "Masses_nsd": 0.5323598980903625,
+      "Tumor_dice": 0.7646682858238527,
+      "Tumor_nsd": 0.483465313911438
+    },
+    {
+      "case": "case_00055",
+      "Kidney+Masses_dice": 0.9572232773166469,
+      "Kidney+Masses_nsd": 0.870171070098877,
+      "Masses_dice": 0.9369678537424052,
+      "Masses_nsd": 0.6756547689437866,
+      "Tumor_dice": 0.9364396761161349,
+      "Tumor_nsd": 0.6717260479927063
+    },
+    {
+      "case": "case_00056",
+      "Kidney+Masses_dice": 0.903084960547478,
+      "Kidney+Masses_nsd": 0.6767753958702087,
+      "Masses_dice": 0.8396193588405271,
+      "Masses_nsd": 0.4309043884277344,
+      "Tumor_dice": 0.8396193588405271,
+      "Tumor_nsd": 0.4309043884277344
+    },
+    {
+      "case": "case_00057",
+      "Kidney+Masses_dice": 0.9490310334805651,
+      "Kidney+Masses_nsd": 0.87762051820755,
+      "Masses_dice": 0.8319413165175986,
+      "Masses_nsd": 0.5190249085426331,
+      "Tumor_dice": 0.8319413165175986,
+      "Tumor_nsd": 0.5190249085426331
+    },
+    {
+      "case": "case_00058",
+      "Kidney+Masses_dice": 0.9415865288946329,
+      "Kidney+Masses_nsd": 0.8083018660545349,
+      "Masses_dice": 0.8754356159609689,
+      "Masses_nsd": 0.6425920724868774,
+      "Tumor_dice": 0.8791219624402347,
+      "Tumor_nsd": 0.6576628088951111
+    },
+    {
+      "case": "case_00059",
+      "Kidney+Masses_dice": 0.9477603798555145,
+      "Kidney+Masses_nsd": 0.8648508787155151,
+      "Masses_dice": 0.6518275538894096,
+      "Masses_nsd": 0.4218559265136719,
+      "Tumor_dice": 0.6754613143412107,
+      "Tumor_nsd": 0.45445576310157776
+    },
+    {
+      "case": "case_00060",
+      "Kidney+Masses_dice": 0.9298452196858995,
+      "Kidney+Masses_nsd": 0.8599395155906677,
+      "Masses_dice": 0.8757147933964398,
+      "Masses_nsd": 0.7583684921264648,
+      "Tumor_dice": 0.875033593120129,
+      "Tumor_nsd": 0.6838402152061462
+    },
+    {
+      "case": "case_00061",
+      "Kidney+Masses_dice": 0.9519935433293018,
+      "Kidney+Masses_nsd": 0.8085667490959167,
+      "Masses_dice": 0.7633609808871259,
+      "Masses_nsd": 0.4517218768596649,
+      "Tumor_dice": 0.7633609808871259,
+      "Tumor_nsd": 0.4517218768596649
+    },
+    {
+      "case": "case_00062",
+      "Kidney+Masses_dice": 0.9416595666482902,
+      "Kidney+Masses_nsd": 0.7923604846000671,
+      "Masses_dice": 0.4502199120351859,
+      "Masses_nsd": 0.32311978936195374,
+      "Tumor_dice": 0.4599673202614379,
+      "Tumor_nsd": 0.3365570604801178
+    },
+    {
+      "case": "case_00063",
+      "Kidney+Masses_dice": 0.9444546927911666,
+      "Kidney+Masses_nsd": 0.9023976922035217,
+      "Masses_dice": 0.5918980427856168,
+      "Masses_nsd": 0.564328134059906,
+      "Tumor_dice": 0.3583563808771237,
+      "Tumor_nsd": 0.23830845952033997
+    },
+    {
+      "case": "case_00064",
+      "Kidney+Masses_dice": 0.9537997127210701,
+      "Kidney+Masses_nsd": 0.9394548535346985,
+      "Masses_dice": 0.6998365716360995,
+      "Masses_nsd": 0.5425631403923035,
+      "Tumor_dice": 0.7403610430131491,
+      "Tumor_nsd": 0.5562289357185364
+    },
+    {
+      "case": "case_00065",
+      "Kidney+Masses_dice": 0.948328792355808,
+      "Kidney+Masses_nsd": 0.925647497177124,
+      "Masses_dice": 0.8017789072426937,
+      "Masses_nsd": 0.6357768774032593,
+      "Tumor_dice": 0.80208465742977,
+      "Tumor_nsd": 0.6331496834754944
+    },
+    {
+      "case": "case_00066",
+      "Kidney+Masses_dice": 0.94335707283207,
+      "Kidney+Masses_nsd": 0.8548198938369751,
+      "Masses_dice": 0.8069136070875343,
+      "Masses_nsd": 0.5354150533676147,
+      "Tumor_dice": 0.8092542999917175,
+      "Tumor_nsd": 0.5241456627845764
+    },
+    {
+      "case": "case_00067",
+      "Kidney+Masses_dice": 0.9705957731193937,
+      "Kidney+Masses_nsd": 0.8692876696586609,
+      "Masses_dice": 0.9611005029263571,
+      "Masses_nsd": 0.7101532816886902,
+      "Tumor_dice": 0.9616285886218355,
+      "Tumor_nsd": 0.7110045552253723
+    },
+    {
+      "case": "case_00068",
+      "Kidney+Masses_dice": 0.9322970345850561,
+      "Kidney+Masses_nsd": 0.8889317512512207,
+      "Masses_dice": 0.8746527777777777,
+      "Masses_nsd": 0.8402330875396729,
+      "Tumor_dice": 0.8682327032483025,
+      "Tumor_nsd": 0.7661857008934021
+    },
+    {
+      "case": "case_00069",
+      "Kidney+Masses_dice": 0.9470305642836739,
+      "Kidney+Masses_nsd": 0.8317080140113831,
+      "Masses_dice": 0.8637281910009182,
+      "Masses_nsd": 0.7369419932365417,
+      "Tumor_dice": 0.6309727703725767,
+      "Tumor_nsd": 0.3870423138141632
+    },
+    {
+      "case": "case_00070",
+      "Kidney+Masses_dice": 0.9297222172727758,
+      "Kidney+Masses_nsd": 0.6637581586837769,
+      "Masses_dice": 0.8780785291969294,
+      "Masses_nsd": 0.39406147599220276,
+      "Tumor_dice": 0.8780785291969294,
+      "Tumor_nsd": 0.39406147599220276
+    },
+    {
+      "case": "case_00071",
+      "Kidney+Masses_dice": 0.9087869138773815,
+      "Kidney+Masses_nsd": 0.7406783103942871,
+      "Masses_dice": 0.4843844448922023,
+      "Masses_nsd": 0.3420061767101288,
+      "Tumor_dice": 0.4851664984863774,
+      "Tumor_nsd": 0.34388983249664307
+    },
+    {
+      "case": "case_00072",
+      "Kidney+Masses_dice": 0.9711771374509628,
+      "Kidney+Masses_nsd": 0.9667081236839294,
+      "Masses_dice": 0.826332288401254,
+      "Masses_nsd": 0.9052631855010986,
+      "Tumor_dice": 0.45366284201235657,
+      "Tumor_nsd": 0.8365527391433716
+    },
+    {
+      "case": "case_00073",
+      "Kidney+Masses_dice": 0.955584572910107,
+      "Kidney+Masses_nsd": 0.8555678129196167,
+      "Masses_dice": 0.9242022953714214,
+      "Masses_nsd": 0.7213478088378906,
+      "Tumor_dice": 0.9396765778224793,
+      "Tumor_nsd": 0.7698838710784912
+    },
+    {
+      "case": "case_00074",
+      "Kidney+Masses_dice": 0.8880073350196507,
+      "Kidney+Masses_nsd": 0.6980617642402649,
+      "Masses_dice": 0.5786585013576752,
+      "Masses_nsd": 0.413485050201416,
+      "Tumor_dice": 0.7375682075568826,
+      "Tumor_nsd": 0.3815251886844635
+    },
+    {
+      "case": "case_00075",
+      "Kidney+Masses_dice": 0.9451762020811574,
+      "Kidney+Masses_nsd": 0.8634859323501587,
+      "Masses_dice": 0.5871345029239766,
+      "Masses_nsd": 0.5196477174758911,
+      "Tumor_dice": 0.5865384615384616,
+      "Tumor_nsd": 0.4746945798397064
+    },
+    {
+      "case": "case_00076",
+      "Kidney+Masses_dice": 0.9404017662534809,
+      "Kidney+Masses_nsd": 0.8660844564437866,
+      "Masses_dice": 0.7842482100238664,
+      "Masses_nsd": 0.6641790866851807,
+      "Tumor_dice": 0.8040127232689014,
+      "Tumor_nsd": 0.7033045887947083
+    },
+    {
+      "case": "case_00077",
+      "Kidney+Masses_dice": 0.9418134192019888,
+      "Kidney+Masses_nsd": 0.890848696231842,
+      "Masses_dice": 0.6920943134535368,
+      "Masses_nsd": 0.5398970246315002,
+      "Tumor_dice": 0.6920943134535368,
+      "Tumor_nsd": 0.5398970246315002
+    },
+    {
+      "case": "case_00078",
+      "Kidney+Masses_dice": 0.9500602081516708,
+      "Kidney+Masses_nsd": 0.8372485041618347,
+      "Masses_dice": 0.9154673275752236,
+      "Masses_nsd": 0.6646436452865601,
+      "Tumor_dice": 0.9164498841286305,
+      "Tumor_nsd": 0.6687363982200623
+    },
+    {
+      "case": "case_00079",
+      "Kidney+Masses_dice": 0.9298134962674617,
+      "Kidney+Masses_nsd": 0.7532927393913269,
+      "Masses_dice": 0.8415785171055565,
+      "Masses_nsd": 0.2957099378108978,
+      "Tumor_dice": 0.8304675678717471,
+      "Tumor_nsd": 0.2790706753730774
+    },
+    {
+      "case": "case_00080",
+      "Kidney+Masses_dice": 0.9543365455893255,
+      "Kidney+Masses_nsd": 0.9154087901115417,
+      "Masses_dice": 0.8880606286495217,
+      "Masses_nsd": 0.7233869433403015,
+      "Tumor_dice": 0.8880606286495217,
+      "Tumor_nsd": 0.7233869433403015
+    },
+    {
+      "case": "case_00081",
+      "Kidney+Masses_dice": 0.9583363817004328,
+      "Kidney+Masses_nsd": 0.9224780797958374,
+      "Masses_dice": 0.7187132208709298,
+      "Masses_nsd": 0.6566593647003174,
+      "Tumor_dice": 0.7305820105820106,
+      "Tumor_nsd": 0.6353767514228821
+    },
+    {
+      "case": "case_00082",
+      "Kidney+Masses_dice": 0.9561864860046354,
+      "Kidney+Masses_nsd": 0.9179308414459229,
+      "Masses_dice": 0.7432992539375518,
+      "Masses_nsd": 0.6096799373626709,
+      "Tumor_dice": 0.7620396600566572,
+      "Tumor_nsd": 0.6535564661026001
+    },
+    {
+      "case": "case_00083",
+      "Kidney+Masses_dice": 0.9466509213209602,
+      "Kidney+Masses_nsd": 0.8635274171829224,
+      "Masses_dice": 0.7213685720139316,
+      "Masses_nsd": 0.6211088299751282,
+      "Tumor_dice": 0.7374288425047438,
+      "Tumor_nsd": 0.6047475337982178
+    },
+    {
+      "case": "case_00084",
+      "Kidney+Masses_dice": 0.931463930768154,
+      "Kidney+Masses_nsd": 0.804953932762146,
+      "Masses_dice": 0.8694459627329193,
+      "Masses_nsd": 0.6613685488700867,
+      "Tumor_dice": 0.8989207849967343,
+      "Tumor_nsd": 0.6297650337219238
+    },
+    {
+      "case": "case_00085",
+      "Kidney+Masses_dice": 0.9539204565665029,
+      "Kidney+Masses_nsd": 0.9231908917427063,
+      "Masses_dice": 0.7348148148148148,
+      "Masses_nsd": 0.6503267884254456,
+      "Tumor_dice": 0.7348148148148148,
+      "Tumor_nsd": 0.6503267884254456
+    },
+    {
+      "case": "case_00086",
+      "Kidney+Masses_dice": 0.950738039100108,
+      "Kidney+Masses_nsd": 0.8398876190185547,
+      "Masses_dice": 0.7925443085708129,
+      "Masses_nsd": 0.5638882517814636,
+      "Tumor_dice": 0.7933991263549588,
+      "Tumor_nsd": 0.5661293864250183
+    },
+    {
+      "case": "case_00087",
+      "Kidney+Masses_dice": 0.9488530472511579,
+      "Kidney+Masses_nsd": 0.8764672875404358,
+      "Masses_dice": 0.7583850931677019,
+      "Masses_nsd": 0.4662782847881317,
+      "Tumor_dice": 0.7583850931677019,
+      "Tumor_nsd": 0.4662782847881317
+    },
+    {
+      "case": "case_00088",
+      "Kidney+Masses_dice": 0.8131337043621193,
+      "Kidney+Masses_nsd": 0.3326041102409363,
+      "Masses_dice": 0.7714850988374413,
+      "Masses_nsd": 0.11229658126831055,
+      "Tumor_dice": 0.7715686833551919,
+      "Tumor_nsd": 0.11231473833322525
+    },
+    {
+      "case": "case_00089",
+      "Kidney+Masses_dice": 0.9537657392272736,
+      "Kidney+Masses_nsd": 0.8691158890724182,
+      "Masses_dice": 0.8779133001864512,
+      "Masses_nsd": 0.6187523007392883,
+      "Tumor_dice": 0.8779133001864512,
+      "Tumor_nsd": 0.6187523007392883
+    },
+    {
+      "case": "case_00090",
+      "Kidney+Masses_dice": 0.946341162436757,
+      "Kidney+Masses_nsd": 0.8891901969909668,
+      "Masses_dice": 0.8764125255275698,
+      "Masses_nsd": 0.6388949155807495,
+      "Tumor_dice": 0.8776671893107915,
+      "Tumor_nsd": 0.6434439420700073
+    },
+    {
+      "case": "case_00091",
+      "Kidney+Masses_dice": 0.9549843278237807,
+      "Kidney+Masses_nsd": 0.9339778423309326,
+      "Masses_dice": 0.8547307132459971,
+      "Masses_nsd": 0.7255814075469971,
+      "Tumor_dice": 0.855560951918407,
+      "Tumor_nsd": 0.7284046411514282
+    },
+    {
+      "case": "case_00092",
+      "Kidney+Masses_dice": 0.9515325451400306,
+      "Kidney+Masses_nsd": 0.8238883018493652,
+      "Masses_dice": 0.9288865276182968,
+      "Masses_nsd": 0.6866220235824585,
+      "Tumor_dice": 0.9290827671295963,
+      "Tumor_nsd": 0.6827028393745422
+    },
+    {
+      "case": "case_00093",
+      "Kidney+Masses_dice": 0.9571601669949522,
+      "Kidney+Masses_nsd": 0.8948375582695007,
+      "Masses_dice": 0.8906837659535113,
+      "Masses_nsd": 0.8124815821647644,
+      "Tumor_dice": 0.5244630071599046,
+      "Tumor_nsd": 0.40402939915657043
+    },
+    {
+      "case": "case_00094",
+      "Kidney+Masses_dice": 0.9594594960531838,
+      "Kidney+Masses_nsd": 0.9326685070991516,
+      "Masses_dice": 0.7588937585008312,
+      "Masses_nsd": 0.6292270421981812,
+      "Tumor_dice": 0.6528909952606635,
+      "Tumor_nsd": 0.4672551155090332
+    },
+    {
+      "case": "case_00095",
+      "Kidney+Masses_dice": 0.944850132909652,
+      "Kidney+Masses_nsd": 0.9109429717063904,
+      "Masses_dice": 0.9141945621637065,
+      "Masses_nsd": 0.8122363090515137,
+      "Tumor_dice": 0.9295892269951459,
+      "Tumor_nsd": 0.830733597278595
+    },
+    {
+      "case": "case_00096",
+      "Kidney+Masses_dice": 0.9614349775784753,
+      "Kidney+Masses_nsd": 0.9338814616203308,
+      "Masses_dice": 0.6917914300464636,
+      "Masses_nsd": 0.3825463354587555,
+      "Tumor_dice": 0.7060063224446786,
+      "Tumor_nsd": 0.4027690291404724
+    }
+  ],
+  "note": "local val split of training set; NSD tolerance=1.0mm (approx)"
+}

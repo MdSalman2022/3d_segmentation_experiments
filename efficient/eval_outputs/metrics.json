@@ -1,0 +1,61 @@
+{
+  "checkpoint": "output/walmnet_medium/best.pth",
+  "mode": "medium",
+  "n_cases": 8,
+  "per_case": [
+    {
+      "case": "case_00000",
+      "dice_kidney": 0.9442172535273603,
+      "dice_tumor": 0.8056478405315615,
+      "dice_cyst": 0.0
+    },
+    {
+      "case": "case_00001",
+      "dice_kidney": 0.923336862104503,
+      "dice_tumor": 0.4337851929092805,
+      "dice_cyst": 0.0
+    },
+    {
+      "case": "case_00002",
+      "dice_kidney": 0.9454192277833976,
+      "dice_tumor": 0.8968092879759682,
+      "dice_cyst": 0.9071589852570062
+    },
+    {
+      "case": "case_00003",
+      "dice_kidney": 0.9476408229346974,
+      "dice_tumor": 0.8525603296056504,
+      "dice_cyst": 0.0
+    },
+    {
+      "case": "case_00004",
+      "dice_kidney": 0.9363014358677845,
+      "dice_tumor": 0.8332102715563213,
+      "dice_cyst": NaN
+    },
+    {
+      "case": "case_00005",
+      "dice_kidney": 0.6711768424242107,
+      "dice_tumor": 0.5904052293557013,
+      "dice_cyst": NaN
+    },
+    {
+      "case": "case_00006",
+      "dice_kidney": 0.9395796242200058,
+      "dice_tumor": 0.7177002583979328,
+      "dice_cyst": 0.6640079760717846
+    },
+    {
+      "case": "case_00007",
+      "dice_kidney": 0.9343670771598409,
+      "dice_tumor": 0.6485632352080529,
+      "dice_cyst": 0.0
+    }
+  ],
+  "mean": {
+    "dice_kidney": 0.905254893252725,
+    "dice_tumor": 0.7223352056925587,
+    "dice_cyst": 0.26186116022146516,
+    "mean_fg": 0.6298170863889162
+  }
+}
