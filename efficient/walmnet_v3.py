@@ -78,6 +78,8 @@ def get_config(mode: str = "full") -> dict:
         "use_tta": True,             # flip TTA at final/held-out inference
         "val_tta": False,            # keep per-epoch validation fast (no TTA)
         "tta_flips": ((), (2,), (3,), (4,)),   # identity + 3 single-axis flips
+        "sw_overlap": 0.6,           # (was 0.5) higher overlap helps boundary/NSD
+        "sw_mode": "gaussian",       # Gaussian window blending (was 'constant')
         # ---- post-processing (cyst FP suppression; recall-safe defaults) ----
         "postprocess": True,
         "keep_n_kidney": 2,          # keep 2 largest kidney components (two kidneys)
@@ -232,7 +234,8 @@ def predict_logits(model, img, cfg, device):
     for fl in flips:
         x = torch.flip(img, dims=list(fl)) if fl else img
         lg = sliding_window_inference(x, cfg["patch_size"], cfg["sw_batch_size"],
-                                      model, overlap=cfg["sw_overlap"])
+                                      model, overlap=cfg.get("sw_overlap", 0.5),
+                                      mode=cfg.get("sw_mode", "gaussian"))
         if fl:
             lg = torch.flip(lg, dims=list(fl))
         p = F.softmax(lg, dim=1)
@@ -326,6 +329,18 @@ def _dice(pm, gm):
     return float("nan") if denom == 0 else float(2.0 * (pm & gm).sum() / denom)
 
 
+def _binary_stats(pm, gm):
+    """Dice, IoU, recall, precision for a binary pred/gt pair (NaN when undefined)."""
+    tp = float((pm & gm).sum()); pp = float(pm.sum()); gp = float(gm.sum())
+    union = pp + gp - tp
+    return {
+        "dice": float("nan") if (pp + gp) == 0 else 2.0 * tp / (pp + gp),
+        "iou": float("nan") if union == 0 else tp / union,
+        "recall": float("nan") if gp == 0 else tp / gp,       # sensitivity to real lesions
+        "precision": float("nan") if pp == 0 else tp / pp,    # 1-FP-rate proxy
+    }
+
+
 def evaluate_native(model, val_files, cfg, device, n_cases=None, logger=None,
                     out_dir=None):
     """Score the full held-out val split in native space, KiTS HEC format."""
@@ -358,13 +373,21 @@ def evaluate_native(model, val_files, cfg, device, n_cases=None, logger=None,
             pred = postprocess(pred, cfg, spacing=spacing)
 
             rec = {"case": case}
+            # KiTS Hierarchical Evaluation Classes (the headline metric)
             for name, labs in zip(HECS, HEC_LABELS):
                 pm, gm = np.isin(pred, labs), np.isin(gt, labs)
                 rec[f"{name}_dice"] = _dice(pm, gm)
                 if have_nsd:
                     rec[f"{name}_nsd"] = _nsd(pm, gm, spacing, HEC_NSD_TOL[name])
+            # Per-class stats (kidney/tumor/cyst) so tables can cite REAL numbers
+            # and cyst recall vs precision (FP) can be read separately.
+            for cid, cname in ((1, "kidney"), (2, "tumor"), (3, "cyst")):
+                st = _binary_stats(pred == cid, gt == cid)
+                for k, v in st.items():
+                    rec[f"{cname}_{k}"] = v
             per_case.append(rec)
-            log(f"  {case}: " + " ".join(f"{h}={rec[h+'_dice']:.3f}" for h in HECS))
+            log(f"  {case}: " + " ".join(f"{h}={rec[h+'_dice']:.3f}" for h in HECS)
+                + f" | cyst(rec/prec)={rec['cyst_recall']}/{rec['cyst_precision']}")
 
     def _mean(k):
         vals = [r[k] for r in per_case if r.get(k) == r.get(k)]
@@ -376,15 +399,28 @@ def evaluate_native(model, val_files, cfg, device, n_cases=None, logger=None,
             summary[h]["nsd"] = _mean(f"{h}_nsd")
     avg_dice = sum(summary[h]["dice"] for h in HECS) / 3.0
 
+    per_class = {c: {k: _mean(f"{c}_{k}") for k in ("dice", "iou", "recall", "precision")}
+                 for c in ("kidney", "tumor", "cyst")}
+
+    mixer = "mamba" if _has_mamba() and cfg.get("mixer", "auto") != "lite" else "lite"
+    metrics = {"avg_dice": avg_dice, "hec": summary, "per_class": per_class}
+
     if out_dir is not None:
-        out = {"avg_dice": avg_dice, "hec": summary, "n_cases": len(per_case),
-               "native": True, "tta": cfg.get("use_tta"), "postproc": cfg.get("postprocess"),
+        out = {"avg_dice": avg_dice, "hec": summary, "per_class": per_class,
+               "n_cases": len(per_case), "native": True, "mixer": mixer,
+               "tta": cfg.get("use_tta"), "postproc": cfg.get("postprocess"),
+               "sw_overlap": cfg.get("sw_overlap"), "ct_norm": cfg.get("ct_norm"),
                "per_case": per_case}
         Path(out_dir).mkdir(parents=True, exist_ok=True)
         (Path(out_dir) / "kits_metrics_native.json").write_text(json.dumps(out, indent=2))
-
-    metrics = {"avg_dice": avg_dice, "hec": summary}
     return avg_dice, metrics
+
+
+def _has_mamba():
+    try:
+        return bool(_import_W()._HAS_MAMBA)
+    except Exception:  # noqa: BLE001
+        return False
 
 
 def _nsd(pm, gm, spacing, tol):
@@ -392,11 +428,12 @@ def _nsd(pm, gm, spacing, tol):
     import torch
     try:
         from monai.metrics import compute_surface_dice
-        p = torch.from_numpy(pm[None, None].astype(np.float32))
-        g = torch.from_numpy(gm[None, None].astype(np.float32))
-        # one-hot with an explicit foreground channel; include_background=False
-        val = compute_surface_dice(p, g, class_thresholds=[tol],
-                                   include_background=True, spacing=spacing)
+        # proper 2-channel one-hot [background, foreground]; score foreground only
+        p = np.stack([~pm, pm]).astype(np.float32)[None]   # (1,2,D,H,W)
+        g = np.stack([~gm, gm]).astype(np.float32)[None]
+        val = compute_surface_dice(torch.from_numpy(p), torch.from_numpy(g),
+                                   class_thresholds=[float(tol)],
+                                   include_background=False, spacing=spacing)
         return float(val.item())
     except Exception:  # noqa: BLE001
         return float("nan")
@@ -536,12 +573,18 @@ def evaluate(cfg, checkpoint: str):
     avg, metrics = evaluate_native(model, val_files, cfg, device, n_cases=None,
                                    out_dir=out_dir)
     print(f"\n=== KiTS23 HEC (native resolution, {len(val_files)} val cases) ===")
-    print(f"  Average Dice = {avg:.4f}   [tta={cfg['use_tta']} postproc={cfg['postprocess']}]")
+    print(f"  Average Dice = {avg:.4f}   [tta={cfg['use_tta']} postproc={cfg['postprocess']} "
+          f"overlap={cfg['sw_overlap']} ct_norm={cfg['ct_norm']}]")
     for h in HECS:
         line = f"  {h:<14} Dice={metrics['hec'][h]['dice']:.4f}"
         if "nsd" in metrics["hec"][h]:
             line += f"  NSD={metrics['hec'][h]['nsd']:.4f}"
         print(line)
+    print("  --- per-class (native; use THESE for tables, not hardcoded values) ---")
+    for c in ("kidney", "tumor", "cyst"):
+        pc = metrics["per_class"][c]
+        print(f"  {c:<7} Dice={pc['dice']:.4f} IoU={pc['iou']:.4f} "
+              f"recall={pc['recall']:.4f} precision={pc['precision']:.4f}")
     print(f"\nSaved -> {out_dir/'kits_metrics_native.json'}")
 
 

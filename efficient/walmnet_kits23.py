@@ -185,7 +185,9 @@ class _Lifting1D(nn.Module):
         x = x.transpose(dim, -1).contiguous()
         pad = x.shape[-1] % 2
         if pad:
-            x = F.pad(x, (0, 1), mode="replicate")
+            # replicate the last slice along the last axis. F.pad(mode="replicate")
+            # raises on 5D tensors, so do it manually (works for any ndim / odd dims).
+            x = torch.cat([x, x[..., -1:]], dim=-1)
         even = x[..., 0::2].contiguous()
         odd = x[..., 1::2].contiguous()
         detail = odd - self.P(even)
